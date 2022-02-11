@@ -184,6 +184,7 @@ MonoBehaviour:
   - {fileID: 1129337332}
   questionTimeText: {fileID: 1174425170}
   profeImage: {fileID: 1071252239}
+  questionBlockContainer: {fileID: 0}
 --- !u!114 &112168218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1146,7 +1147,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
