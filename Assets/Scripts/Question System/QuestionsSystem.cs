@@ -10,12 +10,12 @@ public class QuestionsSystem : MonoBehaviour
     void Awake()
     {
         sharedQuestion.Initialize(questionGenerator);
-        sharedQuestion.OnAnswerChanged += OnAnswerChanged;
+        sharedQuestion.OnQuestionAnswered += OnAnswerChanged;
     }
 
     private void OnDestroy()
     {
-        sharedQuestion.OnAnswerChanged -= OnAnswerChanged;
+        sharedQuestion.OnQuestionAnswered -= OnAnswerChanged;
     }
 
     void OnAnswerChanged(bool isCorrect)

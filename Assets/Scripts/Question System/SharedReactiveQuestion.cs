@@ -15,7 +15,7 @@ public class SharedReactiveQuestion : ScriptableObject
         currentQuestion = 0;
     }
 
-    public event Action<bool> OnAnswerChanged;
+    public event Action<bool> OnQuestionAnswered;
 
     private Answer[] GetAnswers(int index) => questions[index].answers;
 
@@ -29,11 +29,11 @@ public class SharedReactiveQuestion : ScriptableObject
 
         var selectedAnswer = GetAnswers(currentQuestion)[answerIndex];
         Debug.Log(selectedAnswer.answer + " : " + selectedAnswer.isCorrect);
-        OnAnswerChanged?.Invoke(GetAnswers(currentQuestion)[answerIndex].isCorrect);
-        NextQuestion();
+        OnQuestionAnswered?.Invoke(GetAnswers(currentQuestion)[answerIndex].isCorrect);
+        //NextQuestion();
     }
 
-    void NextQuestion()
+    public void NextQuestion()
     {
         currentQuestion++;
         if (currentQuestion >= questions.Length)
