@@ -16,6 +16,11 @@ public struct Question
     public string questionText;
     public Sprite profeSprite;
     public Answer[] answers;
+
+    public void ShuffleAnswers()
+    {
+        answers.Shuffle();
+    }
 }
 
 [CreateAssetMenu(menuName ="Question System/Question", fileName ="Question")]
@@ -26,15 +31,19 @@ public class QuestionAssetGenerator : ScriptableObject
     public Question[] GetShuffleQuestions()
     {
         Question[] questions = this.questions.ToArray();
-
-        questions.Shuffle();
-
+        questions.ShuffleQuestions();
         return questions;
     }
 }
 
 public static class ArrayExtentions
 {
+    public static void ShuffleQuestions(this Question[] questions)
+    {
+        questions.Shuffle();
+        foreach (Question question in questions) question.ShuffleAnswers();
+    }
+
     public static void Shuffle<T>(this T[] array)
     {
         int i = array.Length;
