@@ -29,7 +29,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
         sharedQuestion.OnQuestionAnswered += OnAnswered;
         UpdateUI();
         source = new CancellationTokenSource();
-        QuestionTimeout(source.Token);
+        QuestionTimeout(source.Token).Forget();
     }
 
     private void Update()
@@ -70,9 +70,9 @@ public class QuestionSystemUiHandler : MonoBehaviour
         if(!cancellation.IsCancellationRequested)OnAnswered();
     }
 
-    async private void OnAnswered(bool isCorrect = false)
+    private void OnAnswered(bool isCorrect = false)
     {
-        OnAnsweredTask(isCorrect);
+        OnAnsweredTask(isCorrect).Forget();
     }
 
     async private UniTaskVoid OnAnsweredTask(bool isCorrect = false)
@@ -82,7 +82,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
         await UniTask.Delay(TIME_BETWEEN_QUESTIONS, DelayType.Realtime, PlayerLoopTiming.Update, source.Token);
         questionBlockContainer.SetActive(true);
         NextQuestion();
-        QuestionTimeout(source.Token);
+        QuestionTimeout(source.Token).Forget();
     }
 
     void NextQuestion()
