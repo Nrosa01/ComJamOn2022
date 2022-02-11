@@ -12,22 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f137868e6774a48950c5a9c02c8faa, type: 3}
   m_Name: Question Memes
   m_EditorClassIdentifier: 
-  questions:
-  - questionText: "\xBFHas aprobado SO?"
-    questionDuration: 4
-    profeSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    answers:
-    - answer: Si (miente)
-      isCorrect: 0
-    - answer: No
-      isCorrect: 1
-  - questionText: "\xBFVamos a acabar a tiempo?"
-    questionDuration: 7
-    profeSprite: {fileID: 0}
-    answers:
-    - answer: "Quiz\xE1s ma\xF1ana"
-      isCorrect: 0
-    - answer: Si
-      isCorrect: 0
-    - answer: Claroooooo que no
-      isCorrect: 1
+  questions: []
