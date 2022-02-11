@@ -5,30 +5,20 @@ using UnityEngine.UI;
 
 public class UIImageAnimation : MonoBehaviour
 {
-    [SerializeField]Sprite[] sprites;
-    [Min(0.1f)][SerializeField] float delayBetweenFrames;
+    [SerializeField] Sprite[] sprites;
+    [Min(0.1f)] [SerializeField] float delayBetweenFrames;
 
-    Image image;
+    public Image[] image;
     float timer = 0;
     int currentSprite = 0;
 
-    void Awake()
-    {
-        image = GetComponent<Image>();
-    }
-
-    public void ResetSprites()
-    {
-        currentSprite = 0;
-        image.sprite = sprites[currentSprite];
-    }
-
     void Update()
     {
-        if(timer > delayBetweenFrames)
+        if (timer > delayBetweenFrames)
         {
             timer -= delayBetweenFrames;
-            image.sprite = sprites[currentSprite];
+            foreach (Image image in image)
+                image.sprite = sprites[currentSprite];
             currentSprite++;
             if (currentSprite >= sprites.Length) currentSprite = 0;
         }

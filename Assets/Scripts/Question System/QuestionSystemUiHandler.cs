@@ -11,8 +11,6 @@ public class QuestionSystemUiHandler : MonoBehaviour
     private const int TIME_BETWEEN_QUESTIONS = 1000;
     private int GetQuestionDuration => Mathf.FloorToInt(sharedQuestion.GetCurrentQuestion.questionDuration * 1000);
 
-    public UnityEvent OnUiUpdate;
-
     [SerializeField] SharedReactiveQuestion sharedQuestion;
 
     [SerializeField] private Text question;
@@ -56,7 +54,6 @@ public class QuestionSystemUiHandler : MonoBehaviour
 
         Sprite profeSprite = sharedQuestion.GetCurrentQuestion.profeSprite;
         if (profeSprite != null) profeImage.sprite = profeSprite;
-        OnUiUpdate?.Invoke();
     }
 
     private void OnDestroy()
