@@ -14,18 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questions:
   - questionText: "\xBFHas aprobado SO?"
-    profeSprite: {fileID: 0}
+    questionDuration: 8
+    profeSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     answers:
     - answer: Si (miente)
       isCorrect: 0
     - answer: No
       isCorrect: 1
   - questionText: "\xBFVamos a acabar a tiempo?"
+    questionDuration: 2
     profeSprite: {fileID: 0}
     answers:
-    - answer: Claroooooo que no
-      isCorrect: 1
-    - answer: Si
-      isCorrect: 0
     - answer: "Quiz\xE1s ma\xF1ana"
       isCorrect: 0
+    - answer: Si
+      isCorrect: 0
+    - answer: Claroooooo que no
+      isCorrect: 1

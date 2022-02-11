@@ -16,6 +16,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
     [SerializeField] private Text question;
     [SerializeField] private Text[] answers;
     [SerializeField] private Text questionTimeText;
+    [SerializeField] private Image profeImage;
     int timer = 0;
 
     private CancellationTokenSource source;
@@ -50,6 +51,9 @@ public class QuestionSystemUiHandler : MonoBehaviour
             if (i < numAnswer) this.answers[i].text = answers[i].answer;
             this.answers[i].transform.parent.gameObject.SetActive(i < numAnswer);
         }
+
+        Sprite profeSprite = sharedQuestion.GetCurrentQuestion.profeSprite;
+        if (profeSprite != null) profeImage.sprite = profeSprite;
     }
 
     private void OnDestroy()
