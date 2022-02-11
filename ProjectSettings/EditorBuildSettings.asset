@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Escena Rioni.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menu Inicio.unity
+    guid: 604c99f5daab12b4f99d8961ef979c04
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 30d3bd55fa52d7b4bac5e2929adde255
   m_configObjects: {}
