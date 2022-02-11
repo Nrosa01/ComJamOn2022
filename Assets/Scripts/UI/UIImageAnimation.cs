@@ -17,6 +17,12 @@ public class UIImageAnimation : MonoBehaviour
         image = GetComponent<Image>();
     }
 
+    public void ResetSprites()
+    {
+        currentSprite = 0;
+        image.sprite = sprites[currentSprite];
+    }
+
     void Update()
     {
         if(timer > delayBetweenFrames)
