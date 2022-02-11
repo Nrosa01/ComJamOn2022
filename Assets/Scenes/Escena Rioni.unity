@@ -184,6 +184,7 @@ MonoBehaviour:
   - {fileID: 1129337332}
   questionTimeText: {fileID: 1174425170}
   profeImage: {fileID: 1071252239}
+  questionBlockContainer: {fileID: 1724483074}
 --- !u!114 &112168218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,7 +640,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 1
   orthographic: 1
   orthographic size: 5
   m_Depth: -1
@@ -858,7 +859,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 858005858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68f949bb30d1a8a419d4e11668b21e29, type: 3}
+  m_Script: {fileID: 11500000, guid: e09ed217804d9964d9cbfc7ffb25e757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   questionGenerator: {fileID: 11400000, guid: a15755649bb81f74a807826aa4091232, type: 2}
