@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class QuestionSystemUiHandler : MonoBehaviour
 {
     private const int TIME_BETWEEN_QUESTIONS = 1000;
-    private const int QUESTION_DURATION = 5000;
+    private int GetQuestionDuration => Mathf.FloorToInt(sharedQuestion.GetCurrentQuestion.questionDuration * 1000);
 
 
     [SerializeField] SharedReactiveQuestion sharedQuestion;
@@ -38,7 +38,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
 
     void UpdateUI()
     {
-        timer = QUESTION_DURATION;
+        timer = GetQuestionDuration;
 
         question.text = sharedQuestion.GetCurrentQuestion.questionText;
 
@@ -61,17 +61,17 @@ public class QuestionSystemUiHandler : MonoBehaviour
 
     async private void QuestionTimeout(CancellationToken cancellation)
     {
-        await UniTask.Delay(QUESTION_DURATION, DelayType.Realtime, PlayerLoopTiming.Update, cancellation);
-        OnAnswered();
+        await UniTask.Delay(GetQuestionDuration, DelayType.Realtime, PlayerLoopTiming.Update, cancellation);
+        if(!cancellation.IsCancellationRequested)OnAnswered();
     }
 
     async private void OnAnswered(bool isCorrect = false)
     {
+        GenericExtensions.CancelAndGenerateNew(ref source);
         question.gameObject.SetActive(false);
         await UniTask.Delay(TIME_BETWEEN_QUESTIONS);
         question.gameObject.SetActive(true);
         NextQuestion();
-        GenericExtensions.CancelAndGenerateNew(ref source);
         QuestionTimeout(source.Token);
     }
 

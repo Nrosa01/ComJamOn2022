@@ -14,6 +14,7 @@ public struct Answer
 public struct Question
 {
     public string questionText;
+    public float questionDuration;
     public Sprite profeSprite;
     public Answer[] answers;
 
@@ -26,8 +27,7 @@ public struct Question
 [CreateAssetMenu(menuName ="Question System/Question", fileName ="Question")]
 public class QuestionAssetGenerator : ScriptableObject
 {
-    [SerializeField]private Question[] questions; 
-
+    [SerializeField]private Question[] questions;
     public Question[] GetShuffleQuestions()
     {
         Question[] questions = this.questions.ToArray();
