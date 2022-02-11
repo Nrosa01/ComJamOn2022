@@ -20,7 +20,11 @@ public class QuestionsSystem : MonoBehaviour
 
     void OnAnswerChanged(bool isCorrect)
     {
-        if (isCorrect) SpawnBlock();
+        if (isCorrect)
+        {
+            SpawnBlock();
+            //Debug.Log(isCorrect);
+        }
     }
 
     void SpawnBlock()

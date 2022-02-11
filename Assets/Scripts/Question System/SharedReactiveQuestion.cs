@@ -27,14 +27,20 @@ public class SharedReactiveQuestion : ScriptableObject
             return;
         }
 
+        var selectedAnswer = GetAnswers(currentQuestion)[answerIndex];
+        Debug.Log(selectedAnswer.answer + " : " + selectedAnswer.isCorrect);
+        OnAnswerChanged?.Invoke(GetAnswers(currentQuestion)[answerIndex].isCorrect);
+        NextQuestion();
+    }
+
+    void NextQuestion()
+    {
         currentQuestion++;
         if (currentQuestion >= questions.Length)
         {
             questions.ShuffleQuestions();
             currentQuestion = 0;
         }
-
-        OnAnswerChanged?.Invoke(GetAnswers(currentQuestion)[answerIndex].isCorrect);
     }
 
     public int GetQuestionIndex => currentQuestion;
