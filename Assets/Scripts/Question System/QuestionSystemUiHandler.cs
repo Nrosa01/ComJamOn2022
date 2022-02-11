@@ -59,7 +59,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
         source.Dispose();
     }
 
-    async private void QuestionTimeout(CancellationToken cancellation)
+    async private UniTaskVoid QuestionTimeout(CancellationToken cancellation)
     {
         await UniTask.Delay(GetQuestionDuration, DelayType.Realtime, PlayerLoopTiming.Update, cancellation);
         if(!cancellation.IsCancellationRequested)OnAnswered();
@@ -67,9 +67,14 @@ public class QuestionSystemUiHandler : MonoBehaviour
 
     async private void OnAnswered(bool isCorrect = false)
     {
+        OnAnsweredTask(isCorrect);
+    }
+
+    async private UniTaskVoid OnAnsweredTask(bool isCorrect = false)
+    {
         GenericExtensions.CancelAndGenerateNew(ref source);
         question.gameObject.SetActive(false);
-        await UniTask.Delay(TIME_BETWEEN_QUESTIONS);
+        await UniTask.Delay(TIME_BETWEEN_QUESTIONS, DelayType.Realtime, PlayerLoopTiming.Update, source.Token);
         question.gameObject.SetActive(true);
         NextQuestion();
         QuestionTimeout(source.Token);

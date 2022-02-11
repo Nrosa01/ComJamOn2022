@@ -28,9 +28,7 @@ public class SharedReactiveQuestion : ScriptableObject
         }
 
         var selectedAnswer = GetAnswers(currentQuestion)[answerIndex];
-        Debug.Log(selectedAnswer.answer + " : " + selectedAnswer.isCorrect);
         OnQuestionAnswered?.Invoke(GetAnswers(currentQuestion)[answerIndex].isCorrect);
-        //NextQuestion();
     }
 
     public void NextQuestion()
