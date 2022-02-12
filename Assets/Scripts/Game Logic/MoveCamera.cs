@@ -1,12 +1,13 @@
+using Cysharp.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveCamera : MonoBehaviour
 {
-   [SerializeField]private float iniSpeed;
-   [SerializeField]private float endSpeed;
-   [SerializeField]private float dur;
+    [SerializeField] private float iniSpeed;
+    [SerializeField] private float endSpeed;
+    [SerializeField] private float dur;
     private float timer;
     [Tooltip("Idealmente valor entre 0.01 y 0.03")]
 
@@ -16,6 +17,13 @@ public class MoveCamera : MonoBehaviour
     {
         timer = 0.001f;
         SignalBus<SignalOnBlockPlaced>.Subscribe(OnSignalBlockPlaced);
+    }
+
+    public async UniTaskVoid StopWatch(float time)
+    {
+        isMoving = false;
+        await UniTask.Delay(Mathf.FloorToInt(time * 1000));
+        isMoving = true;
     }
 
     void OnSignalBlockPlaced(SignalOnBlockPlaced signal)

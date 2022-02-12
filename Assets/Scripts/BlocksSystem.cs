@@ -28,19 +28,10 @@ public class BlocksSystem : MonoBehaviour
         cam = Camera.main;
         sharedQuestion.Initialize(questionGenerator);
         rockSharedQuestion.Initialize(rockQuestions);
-        sharedQuestion.OnQuestionAnswered += OnAnswerChanged;
         SignalBus<SignalOnBecomeVisible>.Subscribe(OnCubeChange);
     }
 
-    void OnAnswerChanged(bool isCorrect)
-    {
-        if (isCorrect)
-        {
-            SpawnBlock();
-            //Debug.Log(isCorrect);
-        }
-    }
-    void SpawnBlock()
+    public void SpawnBlock()
     {
         Vector3 pointInBounds = blockSpawnArea.RandomPointInBounds();
         var instantiated = Instantiate(blocksPrefabs, GetOriginPoint(), Quaternion.identity);
