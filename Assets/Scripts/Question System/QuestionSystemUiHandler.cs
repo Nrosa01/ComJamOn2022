@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class QuestionSystemUiHandler : MonoBehaviour
 {
-    private const int TIME_BETWEEN_QUESTIONS = 1000;
+    private const int TIME_BETWEEN_QUESTIONS = 800;
     private int GetQuestionDuration => Mathf.FloorToInt(sharedQuestion.GetCurrentQuestion.questionDuration * 1000);
 
     [SerializeField] SharedReactiveQuestion sharedQuestion;

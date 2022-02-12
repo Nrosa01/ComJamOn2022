@@ -40,7 +40,7 @@ public class BlocksSystem : MonoBehaviour
         var instantiated = Instantiate(blocksPrefabs, GetOriginPoint(), Quaternion.identity);
         instantiated.GetComponent<SpriteRenderer>().sprite = blockSprites.GetRandom();
         instantiated.transform.parent = blockInventory;
-        instantiated.GetComponent<BlockObject>().SetNewScale(Random.Range(0.5f, 4));
+        instantiated.GetComponent<BlockObject>().SetNewScale(Random.Range(1, 2.5f));
         MoveSpawnCube(instantiated.transform, pointInBounds).Forget();
     }
 
