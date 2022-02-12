@@ -32,6 +32,7 @@ public class BlockObject : MonoBehaviour
         RestoreAlpha().Forget();
         SignalBus<SignalOnBlockPlaced>.Fire();
         transform.SetParent(null);
+        rb.isKinematic = false;
     }
 
     async UniTaskVoid RestoreAlpha()

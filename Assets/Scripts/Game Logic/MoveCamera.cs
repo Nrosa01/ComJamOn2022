@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class MoveCamera : MonoBehaviour
 {
-    [SerializeField]
-    private float iniSpeed;
+   [SerializeField]private float iniSpeed;
+   [SerializeField]private float endSpeed;
+   [SerializeField]private float dur;
+    private float timer;
     [Tooltip("Idealmente valor entre 0.01 y 0.03")]
-    private float acceleration = 0.01f;
 
     bool isMoving = false;
-    Rigidbody2D rb;
-    float currSpeed;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0, iniSpeed);
+        timer = 0.001f;
         SignalBus<SignalOnBlockPlaced>.Subscribe(OnSignalBlockPlaced);
     }
 
@@ -25,10 +23,14 @@ public class MoveCamera : MonoBehaviour
         isMoving = true;
     }
 
-    void FixedUpdate()
+    private void Update()
     {
         if (isMoving)
-            rb.velocity += new Vector2(0f, acceleration) * Time.deltaTime;
+        {
+            Vector2 currentSpeed = Vector2.up * Mathf.Lerp(iniSpeed, endSpeed, timer / dur);
+            transform.Translate(currentSpeed * Time.deltaTime);
+            timer += Time.deltaTime;
+        }
     }
 
     private void OnDestroy()
