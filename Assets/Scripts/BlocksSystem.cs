@@ -70,7 +70,7 @@ public class BlocksSystem : MonoBehaviour
             // TODO
             Debug.Log("Game over");
 
-            //SceneManager.LoadScene("Game Over");
+            SceneManager.LoadScene("Game Over");
         }
     }
 
