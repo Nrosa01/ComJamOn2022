@@ -17,6 +17,7 @@ public class ChangeScene : MonoBehaviour
 
     public void MainMenu()
     {
+        Debug.Log("Menu");
         SceneManager.LoadScene("Menu Inicio");
     }
 }
