@@ -65,19 +65,19 @@ public class BlockObject : MonoBehaviour
         float duration = 0.25f;
         float timer = 0;
         Vector3 finalScale = new Vector3(newScale, newScale, 1);
-        Color intialColor = sprite.color;
+        Color initialColor = sprite.color;
 
         while (timer < duration)
         {
             transform.localScale = Vector3.Lerp(initialScale, finalScale, curve.Evaluate(timer/duration)); // 0 - 1 0 - 0.25
             float alpha = Mathf.Lerp(1, 0.5f, curve.Evaluate(timer / duration));
-            sprite.color = new Color(intialColor.r, intialColor.g, intialColor.b, alpha);
+            sprite.color = new Color(initialColor.r, initialColor.g, initialColor.b, alpha);
             timer += Time.deltaTime;
             await UniTask.Yield();
         }
 
         transform.localScale = finalScale;
-        sprite.color = new Color(intialColor.r, intialColor.g, intialColor.b, 0.5f);
+        sprite.color = new Color(initialColor.r, initialColor.g, initialColor.b, 0.5f);
     }
 
     private void OnMouseDrag()

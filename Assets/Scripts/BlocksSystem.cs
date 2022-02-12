@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BlocksSystem : MonoBehaviour
 {
@@ -70,6 +71,9 @@ public class BlocksSystem : MonoBehaviour
         if (numOfCubes <= 0)
         {
             // TODO
+            Debug.Log("Game over");
+
+            SceneManager.LoadScene("Game Over");
         }
     }
 
