@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Sounds { AhhCorrect, BotonYApuntes, OhhhIncorrect, AQueSeJuega_V1, AQueSeJuega_V2, AQueSeJuega_V3}
+public enum Sounds { AhhCorrect, BotonYApuntes, OhhhIncorrect, AQueSeJuega_V1, AQueSeJuega_V2, AQueSeJuega_V3, UITransition}
 
 public class EffectsSoundsPlayer : MonoBehaviour
 {
@@ -11,7 +11,7 @@ public class EffectsSoundsPlayer : MonoBehaviour
 
     public void PlayClip(PlaySoundSignal sound)
     {
-        audio.PlayOneShot(clips[(int)sound.sound], 0.25f);
+        audio.PlayOneShot(clips[(int)sound.sound], sound.volume);
     }
 
     private void Awake()

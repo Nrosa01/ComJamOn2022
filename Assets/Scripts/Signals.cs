@@ -9,12 +9,14 @@ public struct SignalOnBecomeVisible
 
 public struct PlaySoundSignal
 {
-    public PlaySoundSignal(Sounds sound)
+    public PlaySoundSignal(Sounds sound, float volume = 0.25f)
     {
         this.sound = sound;
+        this.volume = volume;
     }
 
     public Sounds sound;
+    public float volume;
 }
 
 public struct SignalOnBlockPlaced{};

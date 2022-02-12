@@ -61,7 +61,7 @@ public class BlocksSystem : MonoBehaviour
         transform.position = endPoint;
         transform.GetComponent<CheckIfVisible>().SetEnabled(true);
     }
-
+    [SerializeField] UITransicion transition;
     void OnCubeChange(SignalOnBecomeVisible context)
     {
         if (context.isVisible) numOfCubes++;
@@ -71,8 +71,15 @@ public class BlocksSystem : MonoBehaviour
         {
             result.TotalTime = Mathf.FloorToInt(Time.timeSinceLevelLoad);
             Debug.Log("Time :" + result.TotalTime);
-            SceneManager.LoadScene("Game Over");
+            FinishGame().Forget();
+            
         }
+    }
+
+    async UniTaskVoid FinishGame()
+    {
+        await transition.EndLerp();
+        SceneManager.LoadScene("Game Over");
     }
 
     private void OnDestroy()

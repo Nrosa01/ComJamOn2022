@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,17 +8,27 @@ public class ChangeScene : MonoBehaviour
 {
     public void SceneGame()
     {
-        SceneManager.LoadScene("Escena Rioni");
+        GenericSceneChange("Escena Rioni").Forget();
+        //SceneManager.LoadScene("Escena Rioni");
     }
 
     public void Credits()
     {
-        SceneManager.LoadScene("Creditos");
+        GenericSceneChange("Creditos").Forget();
+        //SceneManager.LoadScene("Creditos");
     }
 
     public void MainMenu()
     {
         Debug.Log("Menu");
-        SceneManager.LoadScene("Menu Inicio");
+        GenericSceneChange("Menu Inicio").Forget();
+        //SceneManager.LoadScene("Menu Inicio");
+    }
+
+    [SerializeField] UITransicion transition;
+    public async UniTaskVoid GenericSceneChange(string sceneName)
+    {
+        await transition.EndLerp();
+        SceneManager.LoadScene(sceneName);
     }
 }
