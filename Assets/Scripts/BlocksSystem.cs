@@ -19,6 +19,7 @@ public class BlocksSystem : MonoBehaviour
 
     [SerializeField] Bounds blockSpawnArea;
     [SerializeField] Vector3 origin;
+    Result result;
     Camera cam;
 
     Vector3 GetOriginPoint() => blockSpawnArea.center + Camera.main.transform.position + origin;
@@ -27,6 +28,7 @@ public class BlocksSystem : MonoBehaviour
     private void Awake()
     {
         cam = Camera.main;
+        result = FindObjectOfType<Result>();
         sharedQuestion.Initialize(questionGenerator);
         rockSharedQuestion.Initialize(rockQuestions);
         SignalBus<SignalOnBecomeVisible>.Subscribe(OnCubeChange);
@@ -67,10 +69,9 @@ public class BlocksSystem : MonoBehaviour
 
         if (numOfCubes <= 0)
         {
-            // TODO
-            Debug.Log("Game over");
-
-            //SceneManager.LoadScene("Game Over");
+            result.TotalTime = Mathf.FloorToInt(Time.timeSinceLevelLoad);
+            Debug.Log("Time :" + result.TotalTime);
+            SceneManager.LoadScene("Game Over");
         }
     }
 
