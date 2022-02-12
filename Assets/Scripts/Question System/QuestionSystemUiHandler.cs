@@ -31,6 +31,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
 
     public void Answer(int index)
     {
+        SignalBus<SignalOnBlockPlaced>.Fire();
         if (!isRockQuestion)
         {
             sharedQuestion.AnswerQuestion(index);

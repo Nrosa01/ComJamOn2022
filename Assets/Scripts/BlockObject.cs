@@ -32,7 +32,6 @@ public class BlockObject : MonoBehaviour
         rb.gravityScale = 1;
         collider.enabled = true;
         RestoreAlpha().Forget();
-        SignalBus<SignalOnBlockPlaced>.Fire();
         transform.SetParent(null);
         rb.isKinematic = false;
     }
