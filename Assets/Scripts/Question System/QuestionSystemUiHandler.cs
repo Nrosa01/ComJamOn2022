@@ -39,8 +39,9 @@ public class QuestionSystemUiHandler : MonoBehaviour
             sharedQuestion.AnswerQuestion(index);
             rockQuestionCurrent++;
             chuleta--;
+            other--;
 
-            if (chuleta <= 0) powerupImage.enabled = false;
+            if (!powerupEnabled) powerupImage.enabled = false;
         }
         else HandlePowerup(index);
     }
@@ -48,12 +49,15 @@ public class QuestionSystemUiHandler : MonoBehaviour
     int chuleta = 0;
     int x2 = 0;
     int bebida = 0;
+    int other = 0;
 
     public async UniTaskVoid StopWatch(float time)
     {
         await UniTask.Delay(Mathf.FloorToInt(time * 1000));
         powerupImage.enabled = false;
     }
+
+    bool powerupEnabled => chuleta > 0 || x2 > 0 || bebida > 0 || other > 0;
 
     void HandlePowerup(int index)
     {
@@ -66,10 +70,12 @@ public class QuestionSystemUiHandler : MonoBehaviour
                 chuleta = 3;
                 break;
             case Powerups.Cafe:
+                other = 1;
                 Camera.main.GetComponent<MoveCamera>().StopWatch(4.0f).Forget();
                 StopWatch(4.0f).Forget();
                 break;
             case Powerups.Repo:
+                other = 1;
                 for (int i = 0; i < 5; i++)
                     blockSystem.SpawnBlock();
                 break;
@@ -157,7 +163,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
         {
             blockSystem.SpawnBlock();
             if (x2 > 0) blockSystem.SpawnBlock();
-            else powerupImage.enabled = false;
+            else if(!powerupEnabled) powerupImage.enabled = false;
             x2--;
         }
 
@@ -172,7 +178,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
         QuestionTimeout(source.Token).Forget();
 
         bebida--;
-        if (bebida <= 0) powerupImage.enabled = false;
+        if (!powerupEnabled) powerupImage.enabled = false;
 
     }
 
