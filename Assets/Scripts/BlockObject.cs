@@ -23,6 +23,7 @@ public class BlockObject : MonoBehaviour
 
     private void OnMouseUp()
     {
+        if (!isActiveAndEnabled) return;
         this.gameObject.layer = 0;
         this.enabled = false;
         collider.isTrigger = false;

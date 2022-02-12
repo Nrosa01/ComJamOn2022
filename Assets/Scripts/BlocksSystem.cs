@@ -6,10 +6,16 @@ public class BlocksSystem : MonoBehaviour
 {
     [SerializeField] QuestionAssetGenerator questionGenerator;
     [SerializeField] SharedReactiveQuestion sharedQuestion;
+    [SerializeField] GameObject[] blocksPrefabs;
     int numOfCubes;
+
+
+    [SerializeField]Bounds bounds;
+    Camera cam;
 
     private void Awake()
     {
+        cam = Camera.main;
         sharedQuestion.Initialize(questionGenerator);
         sharedQuestion.OnQuestionAnswered += OnAnswerChanged;
         SignalBus<SignalOnBecomeVisible>.Subscribe(OnCubeChange);
@@ -25,7 +31,9 @@ public class BlocksSystem : MonoBehaviour
     }
     void SpawnBlock()
     {
-
+        Vector3 pointInBounds = bounds.RandomPointInBounds();
+        GameObject prefab = blocksPrefabs.GetRandom();
+        Instantiate(prefab, pointInBounds, Quaternion.identity);
     }
 
     void OnCubeChange(SignalOnBecomeVisible context)
@@ -42,5 +50,11 @@ public class BlocksSystem : MonoBehaviour
     private void OnDestroy()
     {
         SignalBus<SignalOnBecomeVisible>.Unsubscribe(OnCubeChange);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(bounds.center + Camera.main.transform.position, bounds.size);
     }
 }
