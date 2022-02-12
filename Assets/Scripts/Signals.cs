@@ -6,3 +6,5 @@ public struct SignalOnBecomeVisible
     }
     public bool isVisible; 
 }
+
+public struct SignalOnBlockPlaced{};

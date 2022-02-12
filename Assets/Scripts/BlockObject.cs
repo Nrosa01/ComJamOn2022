@@ -23,12 +23,16 @@ public class BlockObject : MonoBehaviour
 
     private void OnMouseUp()
     {
+        if (!isActiveAndEnabled) return;
         this.gameObject.layer = 0;
         this.enabled = false;
         collider.isTrigger = false;
         rb.gravityScale = 1;
         collider.enabled = true;
         RestoreAlpha().Forget();
+        SignalBus<SignalOnBlockPlaced>.Fire();
+        transform.SetParent(null);
+        rb.isKinematic = false;
     }
 
     async UniTaskVoid RestoreAlpha()
@@ -50,6 +54,7 @@ public class BlockObject : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Debug.Log("Clicked");
         if (!isActiveAndEnabled) return;
         collider.enabled = false;
         ScaleOverTime().Forget();

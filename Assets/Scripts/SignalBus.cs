@@ -37,7 +37,7 @@ public class SignalSubscription<T> : IDisposable
     public void Dispose() => SignalBus<T>.Unsubscribe(bindedAction);
 }
 
-/// <summary> Clase contenedora de lista de disposables. Cuando esta clase se disposa, disposa todos sus elementos.</summary>
+/// <summary> Clase contenedora de lista de desechables. Cuando esta clase se desecha, desecha todos sus elementos.</summary>
 public class CompositeDisposable : IDisposable
 {
     List<IDisposable> disposables = new List<IDisposable>();
