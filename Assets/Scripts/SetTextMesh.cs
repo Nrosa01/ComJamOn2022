@@ -20,5 +20,7 @@ public class SetTextMesh : MonoBehaviour
         int secs = (int)result.TotalTime % 60;
 
         mText.text = ("Tus apuntes han durado " + mins + ":" + secs);
+
+        Destroy(result.gameObject);
     }
 }
