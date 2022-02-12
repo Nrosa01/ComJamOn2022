@@ -17,7 +17,9 @@ MonoBehaviour:
     questionDuration: 0
     profeSprite: {fileID: 0}
     answers:
-    - answer: SI
-      isCorrect: 0
     - answer: ROCK
       isCorrect: 0
+      powerup: 4
+    - answer: SI
+      isCorrect: 0
+      powerup: 4

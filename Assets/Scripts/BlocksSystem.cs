@@ -10,9 +10,10 @@ public class BlocksSystem : MonoBehaviour
     [SerializeField] QuestionAssetGenerator rockQuestions;
     [SerializeField] SharedReactiveQuestion sharedQuestion;
     [SerializeField] SharedReactiveQuestion rockSharedQuestion;
-    [SerializeField] GameObject[] blocksPrefabs;
+    [SerializeField] GameObject blocksPrefabs;
     [SerializeField] AnimationCurve curve;
     [SerializeField] Transform blockInventory;
+    [SerializeField] Sprite[] blockSprites;
     int numOfCubes;
 
 
@@ -21,30 +22,23 @@ public class BlocksSystem : MonoBehaviour
     Camera cam;
 
     Vector3 GetOriginPoint() => blockSpawnArea.center + Camera.main.transform.position + origin;
+    Vector3 GetDestinationPoint(Vector3 point) => point + Camera.main.transform.position;
 
     private void Awake()
     {
         cam = Camera.main;
         sharedQuestion.Initialize(questionGenerator);
         rockSharedQuestion.Initialize(rockQuestions);
-        sharedQuestion.OnQuestionAnswered += OnAnswerChanged;
         SignalBus<SignalOnBecomeVisible>.Subscribe(OnCubeChange);
     }
 
-    void OnAnswerChanged(bool isCorrect)
-    {
-        if (isCorrect)
-        {
-            SpawnBlock();
-            //Debug.Log(isCorrect);
-        }
-    }
-    void SpawnBlock()
+    public void SpawnBlock()
     {
         Vector3 pointInBounds = blockSpawnArea.RandomPointInBounds();
-        GameObject prefab = blocksPrefabs.GetRandom();
-        var instantiated = Instantiate(prefab, GetOriginPoint(), Quaternion.identity);
+        var instantiated = Instantiate(blocksPrefabs, GetOriginPoint(), Quaternion.identity);
+        instantiated.GetComponent<SpriteRenderer>().sprite = blockSprites.GetRandom();
         instantiated.transform.parent = blockInventory;
+        instantiated.GetComponent<BlockObject>().SetNewScale(Random.Range(0.5f, 4));
         MoveSpawnCube(instantiated.transform, pointInBounds).Forget();
     }
 
@@ -52,15 +46,17 @@ public class BlocksSystem : MonoBehaviour
     {
         float dur = 0.25f;
         float timer = 0;
+        Vector3 endPoint = new Vector3(GetDestinationPoint(point).x, GetDestinationPoint(point).y,0);
+
 
         while (timer < dur)
         {
-            transform.position = Vector3.Lerp(GetOriginPoint(), point, curve.Evaluate(timer / dur));
+            transform.position = Vector3.Lerp(GetOriginPoint(), endPoint, curve.Evaluate(timer / dur));
             timer += Time.deltaTime;
             await UniTask.Yield();
         }
 
-        transform.position = point;
+        transform.position = endPoint;
         transform.GetComponent<CheckIfVisible>().SetEnabled(true);
     }
 

@@ -7,4 +7,14 @@ public struct SignalOnBecomeVisible
     public bool isVisible; 
 }
 
+public struct PlaySoundSignal
+{
+    public PlaySoundSignal(Sounds sound)
+    {
+        this.sound = sound;
+    }
+
+    public Sounds sound;
+}
+
 public struct SignalOnBlockPlaced{};

@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
+public enum Powerups { Chuleta, Cafe, Repo, DuermeBien, BebidaEnergetica}
+
 [System.Serializable]
 public struct Answer
 {
     public string answer;
     public bool isCorrect;
+    public Powerups powerup;
 }
 
 [System.Serializable]

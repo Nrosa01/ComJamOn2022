@@ -14,6 +14,7 @@ public class BlockObject : MonoBehaviour
 
     void Start()
     {
+        this.gameObject.AddComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();
@@ -31,7 +32,6 @@ public class BlockObject : MonoBehaviour
         rb.gravityScale = 1;
         collider.enabled = true;
         RestoreAlpha().Forget();
-        SignalBus<SignalOnBlockPlaced>.Fire();
         transform.SetParent(null);
         rb.isKinematic = false;
     }
@@ -56,10 +56,13 @@ public class BlockObject : MonoBehaviour
     private void OnMouseDown()
     {
         if (!isActiveAndEnabled) return;
+        SignalBus<PlaySoundSignal>.Fire(new PlaySoundSignal(Sounds.BotonYApuntes));
         SignalBus<SignalOnBecomeVisible>.Fire(new SignalOnBecomeVisible(true));
         collider.enabled = false;
         ScaleOverTime().Forget();
     }
+
+    public void SetNewScale(float newScale) => this.newScale = newScale;
 
     async UniTaskVoid ScaleOverTime()
     {
