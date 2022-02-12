@@ -10,9 +10,10 @@ public class BlocksSystem : MonoBehaviour
     [SerializeField] QuestionAssetGenerator rockQuestions;
     [SerializeField] SharedReactiveQuestion sharedQuestion;
     [SerializeField] SharedReactiveQuestion rockSharedQuestion;
-    [SerializeField] GameObject[] blocksPrefabs;
+    [SerializeField] GameObject blocksPrefabs;
     [SerializeField] AnimationCurve curve;
     [SerializeField] Transform blockInventory;
+    [SerializeField] Sprite[] blockSprites;
     int numOfCubes;
 
 
@@ -42,9 +43,10 @@ public class BlocksSystem : MonoBehaviour
     void SpawnBlock()
     {
         Vector3 pointInBounds = blockSpawnArea.RandomPointInBounds();
-        GameObject prefab = blocksPrefabs.GetRandom();
-        var instantiated = Instantiate(prefab, GetOriginPoint(), Quaternion.identity);
+        var instantiated = Instantiate(blocksPrefabs, GetOriginPoint(), Quaternion.identity);
+        instantiated.GetComponent<SpriteRenderer>().sprite = blockSprites.GetRandom();
         instantiated.transform.parent = blockInventory;
+        instantiated.GetComponent<BlockObject>().SetNewScale(Random.Range(0.5f, 4));
         MoveSpawnCube(instantiated.transform, pointInBounds).Forget();
     }
 

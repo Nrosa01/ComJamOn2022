@@ -14,6 +14,7 @@ public class BlockObject : MonoBehaviour
 
     void Start()
     {
+        this.gameObject.AddComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();
@@ -60,6 +61,8 @@ public class BlockObject : MonoBehaviour
         collider.enabled = false;
         ScaleOverTime().Forget();
     }
+
+    public void SetNewScale(float newScale) => this.newScale = newScale;
 
     async UniTaskVoid ScaleOverTime()
     {
