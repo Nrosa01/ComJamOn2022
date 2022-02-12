@@ -55,7 +55,6 @@ public class BlockObject : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("Clicked");
         if (!isActiveAndEnabled) return;
         collider.enabled = false;
         ScaleOverTime().Forget();

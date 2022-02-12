@@ -6,7 +6,9 @@ using UnityEngine;
 public class BlocksSystem : MonoBehaviour
 {
     [SerializeField] QuestionAssetGenerator questionGenerator;
+    [SerializeField] QuestionAssetGenerator rockQuestions;
     [SerializeField] SharedReactiveQuestion sharedQuestion;
+    [SerializeField] SharedReactiveQuestion rockSharedQuestion;
     [SerializeField] GameObject[] blocksPrefabs;
     [SerializeField] AnimationCurve curve;
     [SerializeField] Transform blockInventory;
@@ -23,6 +25,7 @@ public class BlocksSystem : MonoBehaviour
     {
         cam = Camera.main;
         sharedQuestion.Initialize(questionGenerator);
+        rockSharedQuestion.Initialize(rockQuestions);
         sharedQuestion.OnQuestionAnswered += OnAnswerChanged;
         SignalBus<SignalOnBecomeVisible>.Subscribe(OnCubeChange);
     }

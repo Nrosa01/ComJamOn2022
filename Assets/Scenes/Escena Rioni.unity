@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sharedQuestion: {fileID: 11400000, guid: c894dab3deff36a44891b5deac1f47c1, type: 2}
+  rockSharedQuestion: {fileID: 11400000, guid: e69cd0353fd3053469b0d04cb46d4e49, type: 2}
   question: {fileID: 725723566}
   answers:
   - {fileID: 761624920}
@@ -676,7 +677,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionGenerator: {fileID: 11400000, guid: a15755649bb81f74a807826aa4091232, type: 2}
+  rockQuestions: {fileID: 11400000, guid: d14f023f689bb344287ab108359f4185, type: 2}
   sharedQuestion: {fileID: 11400000, guid: c894dab3deff36a44891b5deac1f47c1, type: 2}
+  rockSharedQuestion: {fileID: 11400000, guid: e69cd0353fd3053469b0d04cb46d4e49, type: 2}
   blocksPrefabs:
   - {fileID: 1718411868036959418, guid: cee05d4f600870a4391d1e5d82330e27, type: 3}
   curve:

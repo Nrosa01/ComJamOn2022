@@ -12,6 +12,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
     private int GetQuestionDuration => Mathf.FloorToInt(sharedQuestion.GetCurrentQuestion.questionDuration * 1000);
 
     [SerializeField] SharedReactiveQuestion sharedQuestion;
+    [SerializeField] SharedReactiveQuestion rockSharedQuestion;
 
     [SerializeField] private Text question;
     [SerializeField] private Text[] answers;
@@ -20,13 +21,34 @@ public class QuestionSystemUiHandler : MonoBehaviour
     [SerializeField] private GameObject questionBlockContainer;
     int timer = 0;
 
+    int rockQuestionDelay = 3;
+    int rockQuestionCurrent = 0;
+
+    bool isRockQuestion => rockQuestionCurrent == rockQuestionDelay;
+
     private CancellationTokenSource source;
 
-    public void Answer(int index) => sharedQuestion.AnswerQuestion(index);
+    public void Answer(int index)
+    {
+        if (!isRockQuestion)
+        {
+            sharedQuestion.AnswerQuestion(index);
+            rockQuestionCurrent++;
+        }
+        else HandlePowerup(index);
+    }
+
+    void HandlePowerup(int index)
+    {
+        Debug.Log("The rock");
+        rockQuestionCurrent = 0;
+        OnAnswered();
+    }
 
     private void Start()
     {
         sharedQuestion.OnQuestionAnswered += OnAnswered;
+        rockSharedQuestion.OnQuestionAnswered += OnAnswered;
         UpdateUI();
         source = new CancellationTokenSource();
         QuestionTimeout(source.Token).Forget();
@@ -35,16 +57,25 @@ public class QuestionSystemUiHandler : MonoBehaviour
     private void Update()
     {
         timer -= (int)(Time.deltaTime * 1000);
-        questionTimeText.text = Mathf.FloorToInt(timer/1000 + 1).ToString();
+        questionTimeText.text = Mathf.FloorToInt(timer / 1000 + 1).ToString();
     }
 
     void UpdateUI()
     {
         timer = GetQuestionDuration;
 
-        question.text = sharedQuestion.GetCurrentQuestion.questionText;
+        Answer[] answers;
+        if (isRockQuestion)
+        {
+            question.text = rockSharedQuestion.GetCurrentQuestion.questionText;
+            answers = rockSharedQuestion.GetCurrentQuestion.answers;
+        }
+        else
+        {
+            question.text = sharedQuestion.GetCurrentQuestion.questionText;
+            answers = sharedQuestion.GetCurrentQuestion.answers;
+        }
 
-        var answers = sharedQuestion.GetCurrentQuestion.answers;
         var numAnswer = answers.Length;
 
         for (int i = 0; i < 4; i++)
@@ -60,6 +91,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
     private void OnDestroy()
     {
         sharedQuestion.OnQuestionAnswered -= OnAnswered;
+        rockSharedQuestion.OnQuestionAnswered -= OnAnswered;
         source.Cancel();
         source.Dispose();
     }
@@ -67,7 +99,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
     async private UniTaskVoid QuestionTimeout(CancellationToken cancellation)
     {
         await UniTask.Delay(GetQuestionDuration, DelayType.UnscaledDeltaTime, PlayerLoopTiming.Update, cancellation);
-        if(!cancellation.IsCancellationRequested)OnAnswered();
+        if (!cancellation.IsCancellationRequested) OnAnswered();
     }
 
     private void OnAnswered(bool isCorrect = false)
@@ -87,7 +119,8 @@ public class QuestionSystemUiHandler : MonoBehaviour
 
     void NextQuestion()
     {
-        sharedQuestion.NextQuestion();
+        if (!isRockQuestion) sharedQuestion.NextQuestion();
+        else rockSharedQuestion.NextQuestion();
         UpdateUI();
     }
 }
