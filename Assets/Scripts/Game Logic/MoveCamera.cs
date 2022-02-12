@@ -9,23 +9,30 @@ public class MoveCamera : MonoBehaviour
     [Tooltip("Idealmente valor entre 0.01 y 0.03")]
     private float acceleration = 0.01f;
 
+    bool isMoving = false;
     Rigidbody2D rb;
     float currSpeed;
-    //TODO: When message for block placed, activate this component
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, iniSpeed);
+        SignalBus<SignalOnBlockPlaced>.Subscribe(OnSignalBlockPlaced);
     }
 
-    private void OnEnable()
+    void OnSignalBlockPlaced(SignalOnBlockPlaced signal)
     {
-        //rb.velocity = new Vector2(0, iniSpeed);
+        isMoving = true;
     }
 
     void FixedUpdate()
     {
-        rb.velocity += new Vector2(0f, acceleration) * Time.deltaTime;
+        if (isMoving)
+            rb.velocity += new Vector2(0f, acceleration) * Time.deltaTime;
+    }
+
+    private void OnDestroy()
+    {
+        SignalBus<SignalOnBlockPlaced>.Unsubscribe(OnSignalBlockPlaced);
     }
 }

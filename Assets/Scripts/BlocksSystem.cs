@@ -9,6 +9,7 @@ public class BlocksSystem : MonoBehaviour
     [SerializeField] SharedReactiveQuestion sharedQuestion;
     [SerializeField] GameObject[] blocksPrefabs;
     [SerializeField] AnimationCurve curve;
+    [SerializeField] Transform blockInventory;
     int numOfCubes;
 
 
@@ -39,6 +40,7 @@ public class BlocksSystem : MonoBehaviour
         Vector3 pointInBounds = blockSpawnArea.RandomPointInBounds();
         GameObject prefab = blocksPrefabs.GetRandom();
         var instantiated = Instantiate(prefab, GetOriginPoint(), Quaternion.identity);
+        instantiated.transform.parent = blockInventory;
         MoveSpawnCube(instantiated.transform, pointInBounds).Forget();
     }
 
