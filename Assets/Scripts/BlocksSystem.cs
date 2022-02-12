@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,11 +8,15 @@ public class BlocksSystem : MonoBehaviour
     [SerializeField] QuestionAssetGenerator questionGenerator;
     [SerializeField] SharedReactiveQuestion sharedQuestion;
     [SerializeField] GameObject[] blocksPrefabs;
+    [SerializeField] AnimationCurve curve;
     int numOfCubes;
 
 
-    [SerializeField]Bounds bounds;
+    [SerializeField] Bounds blockSpawnArea;
+    [SerializeField] Vector3 origin;
     Camera cam;
+
+    Vector3 GetOriginPoint() => blockSpawnArea.center + Camera.main.transform.position + origin;
 
     private void Awake()
     {
@@ -31,9 +36,25 @@ public class BlocksSystem : MonoBehaviour
     }
     void SpawnBlock()
     {
-        Vector3 pointInBounds = bounds.RandomPointInBounds();
+        Vector3 pointInBounds = blockSpawnArea.RandomPointInBounds();
         GameObject prefab = blocksPrefabs.GetRandom();
-        Instantiate(prefab, pointInBounds, Quaternion.identity);
+        var instantiated = Instantiate(prefab, GetOriginPoint(), Quaternion.identity);
+        MoveSpawnCube(instantiated.transform, pointInBounds).Forget();
+    }
+
+    async UniTaskVoid MoveSpawnCube(Transform transform, Vector3 point)
+    {
+        float dur = 0.25f;
+        float timer = 0;
+
+        while (timer < dur)
+        {
+            transform.position = Vector3.Lerp(GetOriginPoint(), point, curve.Evaluate(timer / dur));
+            timer += Time.deltaTime;
+            await UniTask.Yield();
+        }
+
+        transform.position = point;
     }
 
     void OnCubeChange(SignalOnBecomeVisible context)
@@ -46,7 +67,7 @@ public class BlocksSystem : MonoBehaviour
             // TODO
         }
     }
-    
+
     private void OnDestroy()
     {
         SignalBus<SignalOnBecomeVisible>.Unsubscribe(OnCubeChange);
@@ -55,6 +76,7 @@ public class BlocksSystem : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(bounds.center + Camera.main.transform.position, bounds.size);
+        Gizmos.DrawWireCube(blockSpawnArea.center + Camera.main.transform.position, blockSpawnArea.size);
+        Gizmos.DrawWireSphere(blockSpawnArea.center + Camera.main.transform.position + origin, 0.25f);
     }
 }
