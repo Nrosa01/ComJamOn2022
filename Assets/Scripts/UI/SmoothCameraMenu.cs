@@ -23,6 +23,8 @@ public class SmoothCameraMenu : MonoBehaviour
 
     async UniTaskVoid Smooth(float d)
     {
+        SignalBus<PlaySoundSignal>.Fire(new PlaySoundSignal(Sounds.BotonYApuntes));
+
         float time = 0;
         Vector3 iniPos = rt.anchoredPosition; 
         Vector3 lastPos = new Vector3(rt.anchoredPosition.x, rt.anchoredPosition.y + d, 0); 
