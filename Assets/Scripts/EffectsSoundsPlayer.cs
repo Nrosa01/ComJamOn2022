@@ -11,7 +11,7 @@ public class EffectsSoundsPlayer : MonoBehaviour
 
     private void PlayClip(PlaySoundSignal sound)
     {
-        audio.PlayOneShot(clips[(int)sound.sound]);
+        audio.PlayOneShot(clips[(int)sound.sound], 0.25f);
     }
 
     private void Awake()
