@@ -17,13 +17,13 @@ MonoBehaviour:
     questionDuration: 4
     profeSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     answers:
-    - answer: No
+    - answer: La gente extraordinaria, va a extraordinaria
       isCorrect: 1
       powerup: 0
     - answer: Si
       isCorrect: 0
       powerup: 0
-    - answer: La gente extraordinaria, va a extraordinaria
+    - answer: No
       isCorrect: 1
       powerup: 0
   - questionText: "\xBFVamos a terminar el juego a tiempo?"
@@ -33,53 +33,52 @@ MonoBehaviour:
     - answer: Tienes mucha fe en nosotros
       isCorrect: 1
       powerup: 0
-    - answer: Si
-      isCorrect: 0
-      powerup: 0
     - answer: Quien sabe...
       isCorrect: 0
       powerup: 0
-  - questionText: "\xBFC\xF3mo vais a organizaros en la Game Jam?"
+    - answer: Si
+      isCorrect: 0
+      powerup: 0
+  - questionText: "\xBFComo vais a organizaros en la Game Jam?"
     questionDuration: 7
     profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
     answers:
-    - answer: "No existe la organizaci\xF3n, solo la anarqu\xEDa"
-      isCorrect: 1
-      powerup: 0
-    - answer: Google Drive
+    - answer: Trello
       isCorrect: 0
+      powerup: 0
+    - answer: No existe la organizacion, solo la anarquia
+      isCorrect: 1
       powerup: 0
     - answer: 'Pivotal '
       isCorrect: 0
       powerup: 0
-    - answer: Trello
+    - answer: Google Drive
       isCorrect: 0
       powerup: 0
   - questionText: "\xBFCual es el mayor dilema del programador?"
     questionDuration: 7
     profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
     answers:
-    - answer: "Funciona, pero no s\xE9 por qu\xE9"
+    - answer: No funciona, pero no se por que
       isCorrect: 1
       powerup: 0
-    - answer: "No funciona, pero no s\xE9 por qu\xE9"
+    - answer: Funciona, pero no se por que
       isCorrect: 1
       powerup: 0
-  - questionText: "\xBFQui\xE9n tiene raz\xF3n a la hora de hacer un break en un
-      for?"
+  - questionText: "\xBFQuien tiene razon a la hora de hacer un break en un for?"
     questionDuration: 7
     profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
     answers:
-    - answer: Miguel, sin duda
-      isCorrect: 0
+    - answer: Samir, por supuesto
+      isCorrect: 1
       powerup: 0
     - answer: Jaime, obvio
-      isCorrect: 0
+      isCorrect: 1
       powerup: 0
-    - answer: Samir, por supuesto
-      isCorrect: 0
+    - answer: Miguel, sin duda
+      isCorrect: 1
       powerup: 0
-  - questionText: "\xBFCu\xE1ndo es la entrega del proyecto?"
+  - questionText: "\xBFCuando es la entrega del proyecto?"
     questionDuration: 7
     profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
     answers:
@@ -92,49 +91,49 @@ MonoBehaviour:
     - answer: El 22/2/2022 a las 22:22:22
       isCorrect: 0
       powerup: 0
-  - questionText: "\xBFC\xF3mo se llama mi hijo?"
+  - questionText: "\xBFComo se llama mi hijo?"
     questionDuration: 7
     profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
     answers:
-    - answer: "Sin duda \xC1ngel"
+    - answer: Sin duda Angel
       isCorrect: 1
       powerup: 0
-    - answer: "\xC1ngel, por supuesto"
+    - answer: Angel, por supuesto
       isCorrect: 1
       powerup: 0
-    - answer: "\xBF\xC1ngel?"
+    - answer: "\xBFAngel?"
       isCorrect: 1
       powerup: 0
-  - questionText: "\xBFQu\xE9 es lo m\xE1s importante para explorar la Luna? "
+  - questionText: "\xBFQue es lo mas importante para explorar la Luna? "
     questionDuration: 7
     profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
     answers:
-    - answer: Lata
+    - answer: Una lata
       isCorrect: 1
       powerup: 0
-    - answer: "Bombonas de ox\xEDgeno"
-      isCorrect: 0
-      powerup: 0
-    - answer: "Botiqu\xEDn de primeros auxilios"
+    - answer: Botiquin de primeros auxilios
       isCorrect: 0
       powerup: 0
     - answer: "Bote neum\xE1tico"
       isCorrect: 0
       powerup: 0
-  - questionText: "\xBFQu\xE9 debes hacer cuando encuentras un error de compilaci\xF3n?"
+    - answer: Ropa termica
+      isCorrect: 0
+      powerup: 0
+  - questionText: "\xBFQue debes hacer cuando encuentras un error de compilaci\xF3n?"
     questionDuration: 7
     profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
     answers:
+    - answer: Cierra el ordenador. Acepta que vas a junio. Llora
+      isCorrect: 1
+      powerup: 0
     - answer: Intenta arreglarlo
       isCorrect: 0
       powerup: 0
     - answer: No existe un error si no hay consola para comprobarlo
       isCorrect: 1
       powerup: 0
-    - answer: Cierra el ordenador. Acepta que vas a junio. Llora
-      isCorrect: 1
-      powerup: 0
-  - questionText: "\xBFQu\xE9 hicieron los profesores al inicio de la cuarentena?"
+  - questionText: "\xBFQue hicieron los profesores al inicio de la cuarentena?"
     questionDuration: 7
     profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
     answers:
@@ -147,19 +146,61 @@ MonoBehaviour:
     - answer: Fingir estar muertos y regresar para el examen
       isCorrect: 1
       powerup: 0
-  - questionText: "\xBFD\xF3nde es mejor sentarse en el aula de artes?"
+  - questionText: "\xBFDonde es mejor sentarse en el aula de artes?"
     questionDuration: 7
     profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
     answers:
-    - answer: En los taburetes de tortura
+    - answer: En las sillas de tortura
       isCorrect: 0
       powerup: 0
     - answer: No te sientas, eres el modelo
       isCorrect: 0
       powerup: 0
-    - answer: En las sillas de tortura
+    - answer: En los taburetes de tortura
       isCorrect: 0
       powerup: 0
     - answer: En los potros de tortura
+      isCorrect: 1
+      powerup: 0
+  - questionText: "\xBFQue significa Complutense?"
+    questionDuration: 7
+    profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
+    answers:
+    - answer: Ciudad de payasos
+      isCorrect: 0
+      powerup: 0
+    - answer: Alcala de Henares
+      isCorrect: 1
+      powerup: 0
+    - answer: "\xBFQui zignifiki clownputisi?"
+      isCorrect: 0
+      powerup: 0
+    - answer: Centro del saber comunal
+      isCorrect: 0
+      powerup: 0
+  - questionText: "\xBFQue es la carrera de Videojuegos?"
+    questionDuration: 7
+    profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
+    answers:
+    - answer: Ingenieria
+      isCorrect: 0
+      powerup: 0
+    - answer: Ciencias
+      isCorrect: 1
+      powerup: 0
+    - answer: "\xBFArtes?"
+      isCorrect: 0
+      powerup: 0
+    - answer: Nada, es nada
+      isCorrect: 1
+      powerup: 0
+  - questionText: Da like y subscribete a mi canal
+    questionDuration: 7
+    profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
+    answers:
+    - answer: Si
+      isCorrect: 1
+      powerup: 0
+    - answer: No tienes opcion, lo haces
       isCorrect: 1
       powerup: 0
