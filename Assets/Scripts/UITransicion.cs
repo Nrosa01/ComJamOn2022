@@ -20,11 +20,14 @@ public class UITransicion : MonoBehaviour
     async UniTaskVoid StartLerp()
     {
         await UniTask.Delay(500);
-        Lerp(left, left.anchoredPosition, left.anchoredPosition + Vector2.left * distance, curve, duration).Forget();
-        Lerp(right, right.anchoredPosition, right.anchoredPosition + Vector2.right * distance, curve, duration).Forget();
-        SignalBus<PlaySoundSignal>.Fire(new PlaySoundSignal(Sounds.UITransition, 1));
+        if (left != null && right != null)
+        {
+            Lerp(left, left.anchoredPosition, left.anchoredPosition + Vector2.left * distance, curve, duration).Forget();
+            Lerp(right, right.anchoredPosition, right.anchoredPosition + Vector2.right * distance, curve, duration).Forget();
+            SignalBus<PlaySoundSignal>.Fire(new PlaySoundSignal(Sounds.UITransition, 1));
+        }
     }
-    
+
     public async UniTask EndLerp()
     {
         await UniTask.Delay(500);
