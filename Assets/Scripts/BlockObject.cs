@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class BlockObject : MonoBehaviour
@@ -11,9 +12,11 @@ public class BlockObject : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer sprite;
     Collider2D collider;
+    CancellationTokenSource source;
 
     void Start()
     {
+        source = new CancellationTokenSource();
         this.gameObject.AddComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
@@ -22,9 +25,16 @@ public class BlockObject : MonoBehaviour
         rb.gravityScale = 0;
     }
 
+    private void OnDestroy()
+    {
+        source.Cancel();
+        source.Dispose();
+    }
+
     private void OnMouseUp()
     {
         if (!isActiveAndEnabled) return;
+        SignalBus<SignalOnBecomeVisible>.Fire(new SignalOnBecomeVisible(true));
         this.gameObject.layer = 0;
         sprite.sortingOrder = -1;
         this.enabled = false;
@@ -47,17 +57,16 @@ public class BlockObject : MonoBehaviour
             float alpha = Mathf.Lerp(0.5f, 1, curve.Evaluate(timer / duration));
             sprite.color = new Color(intialColor.r, intialColor.g, intialColor.b, alpha);
             timer += Time.deltaTime;
-            await UniTask.Yield();
+            await UniTask.Yield(source.Token);
         }
 
-        sprite.color = new Color(intialColor.r, intialColor.g, intialColor.b, 1f); ;
+        if(sprite != null)sprite.color = new Color(intialColor.r, intialColor.g, intialColor.b, 1f); ;
     }
 
     private void OnMouseDown()
     {
         if (!isActiveAndEnabled) return;
         SignalBus<PlaySoundSignal>.Fire(new PlaySoundSignal(Sounds.BotonYApuntes));
-        SignalBus<SignalOnBecomeVisible>.Fire(new SignalOnBecomeVisible(true));
         collider.enabled = false;
         ScaleOverTime().Forget();
     }
