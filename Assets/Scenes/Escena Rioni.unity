@@ -1586,8 +1586,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1648449368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1962, y: -6.1544, z: 0}
-  m_LocalScale: {x: 20.05705, y: 2.3857841, z: 1}
+  m_LocalPosition: {x: -5.4973, y: -6.1705, z: 0}
+  m_LocalScale: {x: 9.455738, y: 2.3535762, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -1840,26 +1840,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929355356}
   m_CullTransparentMesh: 1
---- !u!1 &1981592702 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2909996941792373482, guid: e6034d3283c126b4488e30c61d1f858e, type: 3}
-  m_PrefabInstance: {fileID: 2004134937}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1981592706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1981592702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02fbfc79f94efdc41ba80605eb33c067, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iniSpeed: 0.2
-  endSpeed: 20
-  dur: 120
 --- !u!1001 &2004134937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1915,12 +1895,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera Mover
       objectReference: {fileID: 0}
-    - target: {fileID: 8612502166202393155, guid: e6034d3283c126b4488e30c61d1f858e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3737029582420239461, guid: e6034d3283c126b4488e30c61d1f858e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6034d3283c126b4488e30c61d1f858e, type: 3}
 --- !u!4 &2142999140 stripped
 Transform:

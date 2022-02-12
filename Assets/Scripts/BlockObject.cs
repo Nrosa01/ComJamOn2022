@@ -25,6 +25,7 @@ public class BlockObject : MonoBehaviour
     {
         if (!isActiveAndEnabled) return;
         this.gameObject.layer = 0;
+        sprite.sortingOrder = -1;
         this.enabled = false;
         collider.isTrigger = false;
         rb.gravityScale = 1;
