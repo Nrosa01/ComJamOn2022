@@ -1941,7 +1941,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2018476221
 GameObject:
@@ -2266,6 +2266,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8663264989279858638, guid: 0a54ca04a0a25444cb0602282b7fc1a1, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 8300000, guid: 614fd06b04057af42b0c1aabbc15f6d4, type: 3}
+    - target: {fileID: 8663264989279858638, guid: 0a54ca04a0a25444cb0602282b7fc1a1, type: 3}
+      propertyPath: finished
+      value: 
+      objectReference: {fileID: 8300000, guid: a64a4fcea31998548bf5c9e33fbe6925, type: 3}
     - target: {fileID: 8663264989279858639, guid: 0a54ca04a0a25444cb0602282b7fc1a1, type: 3}
       propertyPath: Loop
       value: 1

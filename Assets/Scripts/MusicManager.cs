@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 public class MusicManager : MonoBehaviour
 {
 
-    //public AudioClip intro;
-    public AudioClip music1;
-    public AudioClip music2;
-    //public AudioClip vsIA;
+    public AudioClip music;
+    public AudioClip finished;
+
     AudioSource musica;
+    AudioSource sound_effects;
+
+    public EffectsSoundsPlayer sndManager;
+
     public static MusicManager instance;
 
 
@@ -20,6 +23,7 @@ public class MusicManager : MonoBehaviour
         {
             instance = this;
             musica = GetComponent<AudioSource>();
+            sndManager = GetComponent<EffectsSoundsPlayer>();
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
@@ -33,19 +37,17 @@ public class MusicManager : MonoBehaviour
         switch (scene.name)
         {
             case "Game Over":
-                if (musica.clip != music1) //Si esta ejecutando el audio battle, se evita que se reinicie el audio
-                {
-                    musica.clip = music1;
-                    musica.Stop();
-                }
+
+                int random = Random.Range(0, 2);
+                GetComponentInChildren<EffectsSoundsPlayer>().PlayClip(new PlaySoundSignal(Sounds.AQueSeJuega_V1 + random));
+                musica.Stop();
+                //sound_effects.PlayOneShot(finished);
+
                 break;
             case "Menu Inicio":
                 {
-                    if (musica.clip != music1) //Si esta ejecutando el audio battle, se evita que se reinicie el audio
-                    {
-                        musica.clip = music1;
-                        musica.Play();
-                    }
+                    musica.clip = music;
+                    musica.Play();
                     break;
                 }
         }

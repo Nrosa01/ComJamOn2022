@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sharedQuestion: {fileID: 11400000, guid: c894dab3deff36a44891b5deac1f47c1, type: 2}
+  rockSharedQuestion: {fileID: 0}
   question: {fileID: 725723566}
   answers:
   - {fileID: 761624920}
@@ -184,6 +185,9 @@ MonoBehaviour:
   questionTimeText: {fileID: 1174425170}
   profeImage: {fileID: 1071252239}
   questionBlockContainer: {fileID: 1724483074}
+  blockSystem: {fileID: 0}
+  powerupSprites: []
+  powerupImage: {fileID: 0}
 --- !u!114 &112168218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,6 +957,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &651013708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 651013710}
+  - component: {fileID: 651013709}
+  m_Layer: 0
+  m_Name: Result
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &651013709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651013708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3193d5e0ce87cb4691d6d1c22b14160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &651013710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651013708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.7750044, y: 0.9318429, z: -1533.3295}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &725723564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,7 +1191,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionGenerator: {fileID: 11400000, guid: a15755649bb81f74a807826aa4091232, type: 2}
+  rockQuestions: {fileID: 0}
   sharedQuestion: {fileID: 11400000, guid: c894dab3deff36a44891b5deac1f47c1, type: 2}
+  rockSharedQuestion: {fileID: 0}
+  blocksPrefabs: {fileID: 0}
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  blockInventory: {fileID: 0}
+  blockSprites: []
+  blockSpawnArea:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
 --- !u!4 &858005860
 Transform:
   m_ObjectHideFlags: 0
@@ -1835,6 +1897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a9ba145b773b9f48a118360cd9e869e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startVisible: 0
 --- !u!212 &1479306295
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -19,6 +19,7 @@ public class BlocksSystem : MonoBehaviour
 
     [SerializeField] Bounds blockSpawnArea;
     [SerializeField] Vector3 origin;
+    Result result;
     Camera cam;
 
     Vector3 GetOriginPoint() => blockSpawnArea.center + Camera.main.transform.position + origin;
@@ -27,6 +28,7 @@ public class BlocksSystem : MonoBehaviour
     private void Awake()
     {
         cam = Camera.main;
+        result = FindObjectOfType<Result>();
         sharedQuestion.Initialize(questionGenerator);
         rockSharedQuestion.Initialize(rockQuestions);
         SignalBus<SignalOnBecomeVisible>.Subscribe(OnCubeChange);
@@ -38,7 +40,7 @@ public class BlocksSystem : MonoBehaviour
         var instantiated = Instantiate(blocksPrefabs, GetOriginPoint(), Quaternion.identity);
         instantiated.GetComponent<SpriteRenderer>().sprite = blockSprites.GetRandom();
         instantiated.transform.parent = blockInventory;
-        instantiated.GetComponent<BlockObject>().SetNewScale(Random.Range(0.5f, 4));
+        instantiated.GetComponent<BlockObject>().SetNewScale(Random.Range(1, 2.5f));
         MoveSpawnCube(instantiated.transform, pointInBounds).Forget();
     }
 
@@ -67,10 +69,9 @@ public class BlocksSystem : MonoBehaviour
 
         if (numOfCubes <= 0)
         {
-            // TODO
-            Debug.Log("Game over");
-
-            //SceneManager.LoadScene("Game Over");
+            result.TotalTime = Mathf.FloorToInt(Time.timeSinceLevelLoad);
+            Debug.Log("Time :" + result.TotalTime);
+            SceneManager.LoadScene("Game Over");
         }
     }
 
