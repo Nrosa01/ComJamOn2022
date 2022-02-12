@@ -66,7 +66,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
 
     async private UniTaskVoid QuestionTimeout(CancellationToken cancellation)
     {
-        await UniTask.Delay(GetQuestionDuration, DelayType.Realtime, PlayerLoopTiming.Update, cancellation);
+        await UniTask.Delay(GetQuestionDuration, DelayType.UnscaledDeltaTime, PlayerLoopTiming.Update, cancellation);
         if(!cancellation.IsCancellationRequested)OnAnswered();
     }
 
@@ -79,7 +79,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
     {
         GenericExtensions.CancelAndGenerateNew(ref source);
         questionBlockContainer.SetActive(false);
-        await UniTask.Delay(TIME_BETWEEN_QUESTIONS, DelayType.Realtime, PlayerLoopTiming.Update, source.Token);
+        await UniTask.Delay(TIME_BETWEEN_QUESTIONS, DelayType.UnscaledDeltaTime, PlayerLoopTiming.Update, source.Token);
         questionBlockContainer.SetActive(true);
         NextQuestion();
         QuestionTimeout(source.Token).Forget();
