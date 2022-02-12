@@ -16,6 +16,7 @@ public class EffectsSoundsPlayer : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(this.gameObject);
         audio = GetComponent<AudioSource>();
         SignalBus<PlaySoundSignal>.Subscribe(PlayClip);
     }

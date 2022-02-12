@@ -37,11 +37,12 @@ public class MusicManager : MonoBehaviour
         switch (scene.name)
         {
             case "Game Over":
-                    sndManager.PlayClip(new PlaySoundSignal(Sounds.AQueSeJuega_V1));
-                    //SignalBus<PlaySoundSignal>.Fire(new PlaySoundSignal(Sounds.AQueSeJuega));
-                    musica.Stop();
-                    //sound_effects.PlayOneShot(finished);
-                
+
+                int random = Random.Range(0, 2);
+                GetComponentInChildren<EffectsSoundsPlayer>().PlayClip(new PlaySoundSignal(Sounds.AQueSeJuega_V1 + random));
+                musica.Stop();
+                //sound_effects.PlayOneShot(finished);
+
                 break;
             case "Menu Inicio":
                 {
