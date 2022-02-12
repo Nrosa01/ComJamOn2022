@@ -16,10 +16,12 @@ public class SetTextMesh : MonoBehaviour
         mText = this.gameObject.GetComponent<TMPro.TextMeshProUGUI>();
         Debug.Log("Time :" + result.TotalTime);
 
-        int mins = (int)result.TotalTime / 60;
+        int mins = (int)result.TotalTime/ 60;
         int secs = (int)result.TotalTime % 60;
 
-        mText.text = ("Tus apuntes han durado " + mins + ":" + secs);
+        int creditos = (((int)result.TotalTime - 20) / 10) * 6; 
+
+        mText.text = ("Tus apuntes han durado " + mins + ":" + secs.ToString().PadLeft(2, '0') + "\nTus creditos son " + creditos);
 
         Destroy(result.gameObject);
     }
