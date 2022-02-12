@@ -61,6 +61,7 @@ public class BlocksSystem : MonoBehaviour
         }
 
         transform.position = point;
+        transform.GetComponent<CheckIfVisible>().SetEnabled(true);
     }
 
     void OnCubeChange(SignalOnBecomeVisible context)

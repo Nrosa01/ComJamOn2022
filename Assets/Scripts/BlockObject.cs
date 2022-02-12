@@ -56,6 +56,7 @@ public class BlockObject : MonoBehaviour
     private void OnMouseDown()
     {
         if (!isActiveAndEnabled) return;
+        SignalBus<SignalOnBecomeVisible>.Fire(new SignalOnBecomeVisible(true));
         collider.enabled = false;
         ScaleOverTime().Forget();
     }

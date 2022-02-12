@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class CheckIfVisible : MonoBehaviour
 {
+    private bool enabled = false;
+    public bool SetEnabled(bool enabled) => this.enabled = enabled;
+
     private void OnBecameInvisible()
     {
-        SignalBus<SignalOnBecomeVisible>.Fire(new SignalOnBecomeVisible(false));
+        if(enabled)SignalBus<SignalOnBecomeVisible>.Fire(new SignalOnBecomeVisible(false));
     }
 
     private void OnBecameVisible()
     {
-        SignalBus<SignalOnBecomeVisible>.Fire(new SignalOnBecomeVisible(true));
+        //if(enabled)SignalBus<SignalOnBecomeVisible>.Fire(new SignalOnBecomeVisible(true));
     }
 }
