@@ -24,7 +24,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
     [SerializeField] private Image powerupImage;
     int timer = 0;
 
-    int rockQuestionDelay = 3;
+    int rockQuestionDelay = 9;
     int rockQuestionCurrent = 0;
 
     bool isRockQuestion => rockQuestionCurrent == rockQuestionDelay;
@@ -158,8 +158,11 @@ public class QuestionSystemUiHandler : MonoBehaviour
             blockSystem.SpawnBlock();
             if (x2 > 0) blockSystem.SpawnBlock();
             else powerupImage.enabled = false;
-                x2--;
+            x2--;
         }
+
+        if (isCorrect) SignalBus<PlaySoundSignal>.Fire(new PlaySoundSignal(Sounds.AhhCorrect));
+        else SignalBus<PlaySoundSignal>.Fire(new PlaySoundSignal(Sounds.OhhhIncorrect));
         GenericExtensions.CancelAndGenerateNew(ref source);
         questionBlockContainer.SetActive(false);
         if (bebida <= 0)
