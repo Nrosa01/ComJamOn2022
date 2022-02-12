@@ -2393,7 +2393,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1981592706, guid: e6034d3283c126b4488e30c61d1f858e, type: 3}
       propertyPath: dur
-      value: 240
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981592706, guid: e6034d3283c126b4488e30c61d1f858e, type: 3}
+      propertyPath: endSpeed
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1981592706, guid: e6034d3283c126b4488e30c61d1f858e, type: 3}
       propertyPath: iniSpeed
