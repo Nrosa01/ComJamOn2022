@@ -46,11 +46,8 @@ public class MusicManager : MonoBehaviour
                 break;
             case "Menu Inicio":
                 {
-                    if (musica.clip != music) //Si esta ejecutando el audio battle, se evita que se reinicie el audio
-                    {
-                        musica.clip = music;
-                        musica.Play();
-                    }
+                    musica.clip = music;
+                    musica.Play();
                     break;
                 }
         }
