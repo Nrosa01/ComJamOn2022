@@ -20,9 +20,11 @@ public class QuestionSystemUiHandler : MonoBehaviour
     [SerializeField] private Image profeImage;
     [SerializeField] private GameObject questionBlockContainer;
     [SerializeField] private BlocksSystem blockSystem;
+    [SerializeField] private Sprite[] powerupSprites;
+    [SerializeField] private Image powerupImage;
     int timer = 0;
 
-    int rockQuestionDelay = 9;
+    int rockQuestionDelay = 3;
     int rockQuestionCurrent = 0;
 
     bool isRockQuestion => rockQuestionCurrent == rockQuestionDelay;
@@ -37,6 +39,8 @@ public class QuestionSystemUiHandler : MonoBehaviour
             sharedQuestion.AnswerQuestion(index);
             rockQuestionCurrent++;
             chuleta--;
+
+            if (chuleta <= 0) powerupImage.enabled = false;
         }
         else HandlePowerup(index);
     }
@@ -44,10 +48,18 @@ public class QuestionSystemUiHandler : MonoBehaviour
     int chuleta = 0;
     int x2 = 0;
     int bebida = 0;
+
+    public async UniTaskVoid StopWatch(float time)
+    {
+        await UniTask.Delay(Mathf.FloorToInt(time * 1000));
+        powerupImage.enabled = false;
+    }
+
     void HandlePowerup(int index)
     {
         Powerups powerup = rockSharedQuestion.GetCurrentQuestion.answers[index].powerup;
-
+        powerupImage.sprite = powerupSprites[(int)powerup];
+        powerupImage.enabled = true;
         switch (powerup)
         {
             case Powerups.Chuleta:
@@ -55,6 +67,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
                 break;
             case Powerups.Cafe:
                 Camera.main.GetComponent<MoveCamera>().StopWatch(4.0f).Forget();
+                StopWatch(4.0f).Forget();
                 break;
             case Powerups.Repo:
                 for (int i = 0; i < 5; i++)
@@ -144,7 +157,8 @@ public class QuestionSystemUiHandler : MonoBehaviour
         {
             blockSystem.SpawnBlock();
             if (x2 > 0) blockSystem.SpawnBlock();
-            x2--;
+            else powerupImage.enabled = false;
+                x2--;
         }
         GenericExtensions.CancelAndGenerateNew(ref source);
         questionBlockContainer.SetActive(false);
@@ -155,6 +169,8 @@ public class QuestionSystemUiHandler : MonoBehaviour
         QuestionTimeout(source.Token).Forget();
 
         bebida--;
+        if (bebida <= 0) powerupImage.enabled = false;
+
     }
 
     void NextQuestion()

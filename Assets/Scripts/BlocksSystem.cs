@@ -22,6 +22,7 @@ public class BlocksSystem : MonoBehaviour
     Camera cam;
 
     Vector3 GetOriginPoint() => blockSpawnArea.center + Camera.main.transform.position + origin;
+    Vector3 GetDestinationPoint(Vector3 point) => point + Camera.main.transform.position;
 
     private void Awake()
     {
@@ -45,15 +46,17 @@ public class BlocksSystem : MonoBehaviour
     {
         float dur = 0.25f;
         float timer = 0;
+        Vector3 endPoint = new Vector3(GetDestinationPoint(point).x, GetDestinationPoint(point).y,0);
+
 
         while (timer < dur)
         {
-            transform.position = Vector3.Lerp(GetOriginPoint(), point, curve.Evaluate(timer / dur));
+            transform.position = Vector3.Lerp(GetOriginPoint(), endPoint, curve.Evaluate(timer / dur));
             timer += Time.deltaTime;
             await UniTask.Yield();
         }
 
-        transform.position = point;
+        transform.position = endPoint;
         transform.GetComponent<CheckIfVisible>().SetEnabled(true);
     }
 
