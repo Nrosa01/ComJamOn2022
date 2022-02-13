@@ -1013,6 +1013,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8663264989279858638, guid: 0a54ca04a0a25444cb0602282b7fc1a1, type: 3}
+      propertyPath: montana
+      value: 
+      objectReference: {fileID: 8300000, guid: dafd835fda3206048a6a432a23aae45e, type: 3}
+    - target: {fileID: 8663264989279858638, guid: 0a54ca04a0a25444cb0602282b7fc1a1, type: 3}
+      propertyPath: sevilla
+      value: 
+      objectReference: {fileID: 8300000, guid: 06f3dd425611b7b4fb51bd3ca32b6030, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a54ca04a0a25444cb0602282b7fc1a1, type: 3}
 --- !u!1 &858005858
@@ -1988,6 +1996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3193d5e0ce87cb4691d6d1c22b14160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  modoUCM: 1
 --- !u!4 &1611946271
 Transform:
   m_ObjectHideFlags: 0

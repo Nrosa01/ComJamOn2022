@@ -4038,6 +4038,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 614fd06b04057af42b0c1aabbc15f6d4, type: 3}
     - target: {fileID: 8663264989279858638, guid: 0a54ca04a0a25444cb0602282b7fc1a1, type: 3}
+      propertyPath: montana
+      value: 
+      objectReference: {fileID: 8300000, guid: dafd835fda3206048a6a432a23aae45e, type: 3}
+    - target: {fileID: 8663264989279858638, guid: 0a54ca04a0a25444cb0602282b7fc1a1, type: 3}
+      propertyPath: sevilla
+      value: 
+      objectReference: {fileID: 8300000, guid: 06f3dd425611b7b4fb51bd3ca32b6030, type: 3}
+    - target: {fileID: 8663264989279858638, guid: 0a54ca04a0a25444cb0602282b7fc1a1, type: 3}
       propertyPath: finished
       value: 
       objectReference: {fileID: 8300000, guid: a64a4fcea31998548bf5c9e33fbe6925, type: 3}
