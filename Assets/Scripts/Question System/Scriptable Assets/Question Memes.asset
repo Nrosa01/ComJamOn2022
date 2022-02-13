@@ -192,7 +192,7 @@ MonoBehaviour:
       powerup: 0
   - questionText: Cual es el valor de pi?
     questionDuration: 10
-    profeSprite: {fileID: -3737217333108074625, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
+    profeSprite: {fileID: -8179870912509109453, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
     - answer: No vi la vida de Pi
       isCorrect: 0
