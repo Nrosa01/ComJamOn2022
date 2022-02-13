@@ -83,13 +83,13 @@ MonoBehaviour:
     profeSprite: {fileID: 1405936903238025810, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
     - answer: A la hora M
-      isCorrect: 0
+      isCorrect: 1
       powerup: 0
     - answer: El 22/2/2022 a las 22:22:22
-      isCorrect: 0
+      isCorrect: 1
       powerup: 0
     - answer: 5 minutos antes del examen
-      isCorrect: 0
+      isCorrect: 1
       powerup: 0
   - questionText: Como se llama mi hijo?
     questionDuration: 10

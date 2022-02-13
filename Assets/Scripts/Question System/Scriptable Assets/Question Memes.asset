@@ -286,3 +286,45 @@ MonoBehaviour:
     - answer: ALPHA
       isCorrect: 1
       powerup: 0
+  - questionText: La Tierra es plana?
+    questionDuration: 10
+    profeSprite: {fileID: 1405936903238025810, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
+    answers:
+    - answer: Si
+      isCorrect: 0
+      powerup: 0
+    - answer: No
+      isCorrect: 1
+      powerup: 0
+    - answer: Como tu encefalograma
+      isCorrect: 0
+      powerup: 0
+  - questionText: 'Completa la frase: "Yo soy..."'
+    questionDuration: 10
+    profeSprite: {fileID: 1405936903238025810, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
+    answers:
+    - answer: Manolo el del Bombi
+      isCorrect: 1
+      powerup: 0
+    - answer: Inevitable
+      isCorrect: 1
+      powerup: 0
+    - answer: Tu padre
+      isCorrect: 1
+      powerup: 0
+  - questionText: Como vas a...?
+    questionDuration: 10
+    profeSprite: {fileID: 1405936903238025810, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
+    answers:
+    - answer: Lentin
+      isCorrect: 1
+      powerup: 0
+    - answer: Con cuidadin
+      isCorrect: 0
+      powerup: 0
+    - answer: En RENFE
+      isCorrect: 0
+      powerup: 0
+    - answer: A caballo
+      isCorrect: 0
+      powerup: 0
