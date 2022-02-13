@@ -15,7 +15,7 @@ MonoBehaviour:
   questions:
   - questionText: Has aprobado SO?
     questionDuration: 10
-    profeSprite: {fileID: 21300000, guid: 16d40d0ad0c65b24eb33449652b6b7ef, type: 3}
+    profeSprite: {fileID: 21300000, guid: 2424fd4ec7ca87f44a3e70c129127dc5, type: 3}
     answers:
     - answer: Si
       isCorrect: 0
@@ -57,7 +57,7 @@ MonoBehaviour:
       powerup: 0
   - questionText: Cual es el mayor dilema del programador?
     questionDuration: 10
-    profeSprite: {fileID: 21300000, guid: 54aaa4dc5b10bb74d90138888c177e76, type: 3}
+    profeSprite: {fileID: 21300000, guid: 9e7de9dad1e6c27429ad4a0ad9346bf7, type: 3}
     answers:
     - answer: No funciona, pero no se por que
       isCorrect: 1
@@ -106,7 +106,7 @@ MonoBehaviour:
       powerup: 0
   - questionText: 'Que es lo mas importante para explorar la Luna? '
     questionDuration: 10
-    profeSprite: {fileID: -3737217333108074625, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
+    profeSprite: {fileID: 21300000, guid: a9a8e714b2432b047a364ed3a60f8a83, type: 3}
     answers:
     - answer: Una lata de comida
       isCorrect: 1
@@ -122,7 +122,7 @@ MonoBehaviour:
       powerup: 0
   - questionText: Que debes hacer cuando encuentras un error de compilacion?
     questionDuration: 10
-    profeSprite: {fileID: 21300000, guid: 54aaa4dc5b10bb74d90138888c177e76, type: 3}
+    profeSprite: {fileID: 21300000, guid: 9e7de9dad1e6c27429ad4a0ad9346bf7, type: 3}
     answers:
     - answer: No existe un error si no hay consola para comprobarlo
       isCorrect: 1
@@ -135,7 +135,7 @@ MonoBehaviour:
       powerup: 0
   - questionText: Que hicieron los profesores al inicio de la cuarentena?
     questionDuration: 10
-    profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
+    profeSprite: {fileID: 21300000, guid: 29e4d56f9440fe34f968fa738d1a9cd5, type: 3}
     answers:
     - answer: Vacaciones anticipadas
       isCorrect: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
       powerup: 0
   - questionText: Donde es mejor sentarse en el aula de artes?
     questionDuration: 10
-    profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
+    profeSprite: {fileID: 21300000, guid: 29e4d56f9440fe34f968fa738d1a9cd5, type: 3}
     answers:
     - answer: En los taburetes de tortura
       isCorrect: 0
@@ -222,7 +222,7 @@ MonoBehaviour:
       powerup: 0
   - questionText: 'Que hace un buen modelo? '
     questionDuration: 10
-    profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
+    profeSprite: {fileID: 21300000, guid: 29e4d56f9440fe34f968fa738d1a9cd5, type: 3}
     answers:
     - answer: He venido a hacer un anuncio, Shadow The Hedgehog es un hijo de puta,
         se orino en mi puta esposa. Asi es, saco su pene de erizo y orino a mi puta
@@ -321,7 +321,7 @@ MonoBehaviour:
       powerup: 0
   - questionText: Sistema operativo para informaticos
     questionDuration: 10
-    profeSprite: {fileID: 21300000, guid: 16d40d0ad0c65b24eb33449652b6b7ef, type: 3}
+    profeSprite: {fileID: 21300000, guid: 2424fd4ec7ca87f44a3e70c129127dc5, type: 3}
     answers:
     - answer: Windows
       isCorrect: 0
@@ -337,7 +337,7 @@ MonoBehaviour:
       powerup: 0
   - questionText: Si?
     questionDuration: 10
-    profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
+    profeSprite: {fileID: 21300000, guid: 9e7de9dad1e6c27429ad4a0ad9346bf7, type: 3}
     answers:
     - answer: 01001110 01101111
       isCorrect: 0
@@ -347,7 +347,7 @@ MonoBehaviour:
       powerup: 0
   - questionText: Como se forman los grupos de practicas?
     questionDuration: 6
-    profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
+    profeSprite: {fileID: 21300000, guid: a9a8e714b2432b047a364ed3a60f8a83, type: 3}
     answers:
     - answer: Por preferencia
       isCorrect: 0
