@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class MusicManager : MonoBehaviour
 {
 
-    public AudioClip music;
-    public AudioClip finished;
+    public AudioClip sevilla;
+    public AudioClip montana;
 
     AudioSource musica;
     AudioSource sound_effects;
@@ -41,15 +41,29 @@ public class MusicManager : MonoBehaviour
                 int random = Random.Range(0, 2);
                 GetComponentInChildren<EffectsSoundsPlayer>().PlayClip(new PlaySoundSignal(Sounds.AQueSeJuega_V1 + random));
                 musica.Stop();
-                //sound_effects.PlayOneShot(finished);
 
                 break;
-            case "Menu Inicio":
+            case "Escena Rioni":
                 {
-                    musica.clip = music;
+                    musica.clip = montana;
                     musica.Play();
                     break;
                 }
+
+            case "Modo Normal":
+                {
+                    musica.clip = sevilla;
+                    musica.Play();
+                    break;
+                }
+            
+            case "Menu Inicio":
+                {
+                    musica.clip = sevilla;
+                    musica.Play();
+                    break;
+                }
+
         }
     }
 }

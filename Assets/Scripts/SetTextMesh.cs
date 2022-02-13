@@ -27,7 +27,8 @@ public class SetTextMesh : MonoBehaviour
 
         mText.text = ("Tus apuntes han durado " + mins + ":" + secs.ToString().PadLeft(2, '0') + "\nTus creditos son " + creditos);
 
-       asignaturaText.text = profesText.GetAsignatura(creditos / 6); ;
+        if(result.modoUCM)
+            asignaturaText.text = profesText.GetAsignatura(creditos / 6);
     }
 
     private void OnDestroy()
