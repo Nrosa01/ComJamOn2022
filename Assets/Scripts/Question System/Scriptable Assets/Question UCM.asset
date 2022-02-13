@@ -15,28 +15,28 @@ MonoBehaviour:
   questions:
   - questionText: Has aprobado SO?
     questionDuration: 10
-    profeSprite: {fileID: -3737217333108074625, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
+    profeSprite: {fileID: 21300000, guid: 16d40d0ad0c65b24eb33449652b6b7ef, type: 3}
     answers:
+    - answer: Si
+      isCorrect: 0
+      powerup: 0
     - answer: La gente extraordinaria, va a extraordinaria
       isCorrect: 1
       powerup: 0
     - answer: No
       isCorrect: 1
       powerup: 0
-    - answer: Si
-      isCorrect: 0
-      powerup: 0
   - questionText: Vais a terminar el juego a tiempo?
     questionDuration: 10
     profeSprite: {fileID: 4001442472916971327, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
-    - answer: Bueno...
+    - answer: No
       isCorrect: 0
       powerup: 0
     - answer: Acaso no vivimos en un juego ya?
       isCorrect: 1
       powerup: 0
-    - answer: No
+    - answer: Bueno...
       isCorrect: 0
       powerup: 0
   - questionText: Como vais a organizaros en la Game Jam?
@@ -46,23 +46,23 @@ MonoBehaviour:
     - answer: No existe la organizacion, solo la anarquia
       isCorrect: 1
       powerup: 0
-    - answer: Google Drive
+    - answer: Trello
       isCorrect: 0
       powerup: 0
     - answer: 'Pivotal '
       isCorrect: 0
       powerup: 0
-    - answer: Trello
+    - answer: Google Drive
       isCorrect: 0
       powerup: 0
   - questionText: Cual es el mayor dilema del programador?
     questionDuration: 10
-    profeSprite: {fileID: 5074963065193959036, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
+    profeSprite: {fileID: 21300000, guid: 54aaa4dc5b10bb74d90138888c177e76, type: 3}
     answers:
-    - answer: Funciona, pero no se por que
+    - answer: No funciona, pero no se por que
       isCorrect: 1
       powerup: 0
-    - answer: No funciona, pero no se por que
+    - answer: Funciona, pero no se por que
       isCorrect: 1
       powerup: 0
   - questionText: Quien tiene razon a la hora de hacer un break en un for?
@@ -82,13 +82,13 @@ MonoBehaviour:
     questionDuration: 10
     profeSprite: {fileID: 1405936903238025810, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
-    - answer: 5 minutos antes del examen
+    - answer: A la hora M
       isCorrect: 0
       powerup: 0
     - answer: El 22/2/2022 a las 22:22:22
       isCorrect: 0
       powerup: 0
-    - answer: A la hora M
+    - answer: 5 minutos antes del examen
       isCorrect: 0
       powerup: 0
   - questionText: Como se llama mi hijo?
@@ -114,105 +114,105 @@ MonoBehaviour:
     - answer: Botiquin de primeros auxilios
       isCorrect: 0
       powerup: 0
-    - answer: Ropa termica
+    - answer: "Bote neum\xE1tico"
       isCorrect: 0
       powerup: 0
-    - answer: "Bote neum\xE1tico"
+    - answer: Ropa termica
       isCorrect: 0
       powerup: 0
   - questionText: Que debes hacer cuando encuentras un error de compilacion?
     questionDuration: 10
-    profeSprite: {fileID: 5074963065193959036, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
+    profeSprite: {fileID: 21300000, guid: 54aaa4dc5b10bb74d90138888c177e76, type: 3}
     answers:
-    - answer: Intenta arreglarlo
-      isCorrect: 0
-      powerup: 0
     - answer: No existe un error si no hay consola para comprobarlo
       isCorrect: 1
       powerup: 0
     - answer: Cierra el ordenador. Acepta que vas a junio. Llora
       isCorrect: 1
       powerup: 0
+    - answer: Intenta arreglarlo
+      isCorrect: 0
+      powerup: 0
   - questionText: Que hicieron los profesores al inicio de la cuarentena?
     questionDuration: 10
     profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
     answers:
+    - answer: Vacaciones anticipadas
+      isCorrect: 0
+      powerup: 0
     - answer: Aprender a usar Collaborate
       isCorrect: 0
       powerup: 0
     - answer: Fingir estar muertos y regresar para el examen
       isCorrect: 1
       powerup: 0
-    - answer: Vacaciones anticipadas
-      isCorrect: 0
-      powerup: 0
   - questionText: Donde es mejor sentarse en el aula de artes?
     questionDuration: 10
     profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
     answers:
-    - answer: No te sientas, eres el modelo
-      isCorrect: 0
-      powerup: 0
     - answer: En los taburetes de tortura
-      isCorrect: 0
-      powerup: 0
-    - answer: En las sillas de tortura
       isCorrect: 0
       powerup: 0
     - answer: En los potros de tortura
       isCorrect: 1
       powerup: 0
+    - answer: No te sientas, eres el modelo
+      isCorrect: 0
+      powerup: 0
+    - answer: En las sillas de tortura
+      isCorrect: 0
+      powerup: 0
   - questionText: Que significa Complutense?
     questionDuration: 10
     profeSprite: {fileID: -1736928041035241418, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
-    - answer: Ciudad de payasos
-      isCorrect: 0
-      powerup: 0
     - answer: Centro del saber comunal
-      isCorrect: 0
-      powerup: 0
-    - answer: "\xBFQui zignifiki clownputisi?"
       isCorrect: 0
       powerup: 0
     - answer: Alcala de Henares
       isCorrect: 1
       powerup: 0
+    - answer: Ciudad de payasos
+      isCorrect: 0
+      powerup: 0
+    - answer: "\xBFQui zignifiki clownputisi?"
+      isCorrect: 0
+      powerup: 0
   - questionText: Que es la carrera de Videojuegos?
     questionDuration: 10
     profeSprite: {fileID: -1736928041035241418, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
+    - answer: Nada, es nada
+      isCorrect: 1
+      powerup: 0
+    - answer: Ingenieria
+      isCorrect: 0
+      powerup: 0
     - answer: Ciencias
       isCorrect: 1
       powerup: 0
     - answer: Artes?
       isCorrect: 0
       powerup: 0
-    - answer: Ingenieria
-      isCorrect: 0
-      powerup: 0
-    - answer: Nada, es nada
-      isCorrect: 1
-      powerup: 0
   - questionText: Da like y subscribete a mi canal
     questionDuration: 10
     profeSprite: {fileID: -8179870912509109453, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
-    - answer: No tienes opcion, lo haces
+    - answer: Si
       isCorrect: 1
       powerup: 0
-    - answer: Si
+    - answer: No tienes opcion, lo haces
       isCorrect: 1
       powerup: 0
   - questionText: Que significa UCM?
     questionDuration: 10
     profeSprite: {fileID: -1736928041035241418, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
-    - answer: Universo Cinematografico de Marvel
-      isCorrect: 0
-      powerup: 0
     - answer: Un Commit Malo
       isCorrect: 1
+      powerup: 0
+    - answer: Universo Cinematografico de Marvel
+      isCorrect: 0
       powerup: 0
     - answer: Unidad de Contencion de Marginados
       isCorrect: 0
@@ -224,6 +224,12 @@ MonoBehaviour:
     questionDuration: 10
     profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
     answers:
+    - answer: He venido a hacer un anuncio, Shadow The Hedgehog es un hijo de puta,
+        se orino en mi puta esposa. Asi es, saco su pene de erizo y orino a mi puta
+        esposa, y dijo que su pene era "Asi de grande" y yo dije que eso es repugnante,
+        asi que estoy haciendo una publicacion destacada en mi twitter punto com
+      isCorrect: 0
+      powerup: 0
     - answer: Para ser justos, debes tener un coeficiente intelectual muy alto para
         entender a Rick y Morty. El humor es extremadamente sutil, y sin una comprension
         solida de la fisica teorica, la mayoria de los chistes pasaran por alto la
@@ -236,18 +242,12 @@ MonoBehaviour:
         solo puede transmitirse con una empat\xEDa refinada. "
       isCorrect: 1
       powerup: 0
-    - answer: He venido a hacer un anuncio, Shadow The Hedgehog es un hijo de puta,
-        se orino en mi puta esposa. Asi es, saco su pene de erizo y orino a mi puta
-        esposa, y dijo que su pene era "Asi de grande" y yo dije que eso es repugnante,
-        asi que estoy haciendo una publicacion destacada en mi twitter punto com
-      isCorrect: 0
-      powerup: 0
   - questionText: El Pong...
     questionDuration: 10
     profeSprite: {fileID: 1405936903238025810, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
-    - answer: Lo hacemos
-      isCorrect: 1
+    - answer: Lo miramos
+      isCorrect: 0
       powerup: 0
     - answer: Lo jugamos
       isCorrect: 0
@@ -255,20 +255,20 @@ MonoBehaviour:
     - answer: Lo adoramos
       isCorrect: 0
       powerup: 0
-    - answer: Lo miramos
-      isCorrect: 0
+    - answer: Lo hacemos
+      isCorrect: 1
       powerup: 0
   - questionText: Necesitamos un juego para una practica
     questionDuration: 10
     profeSprite: {fileID: 5074963065193959036, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
+    - answer: Un plataformas
+      isCorrect: 0
+      powerup: 0
     - answer: El puto PacMan otra vez
       isCorrect: 1
       powerup: 0
     - answer: Un juego de texto
-      isCorrect: 0
-      powerup: 0
-    - answer: Un plataformas
       isCorrect: 0
       powerup: 0
     - answer: Un juego de estrategia PvP
@@ -281,14 +281,14 @@ MonoBehaviour:
     - answer: Tests de unidad
       isCorrect: 0
       powerup: 0
+    - answer: "Jugamos nuestro propio juego un d\xEDa antes de la entrega"
+      isCorrect: 1
+      powerup: 0
     - answer: Ayudandonos entre grupos
       isCorrect: 0
       powerup: 0
     - answer: Testers pagados (jaja)
       isCorrect: 0
-      powerup: 0
-    - answer: "Jugamos nuestro propio juego un d\xEDa antes de la entrega"
-      isCorrect: 1
       powerup: 0
   - questionText: "El verdadero profesor de Dise\xF1o"
     questionDuration: 10
@@ -297,40 +297,40 @@ MonoBehaviour:
     - answer: Federico Peinado
       isCorrect: 0
       powerup: 0
-    - answer: youtube.com/TheGameMakersToolkit
-      isCorrect: 1
-      powerup: 0
     - answer: Proyectos I, II y III
       isCorrect: 1
       powerup: 0
     - answer: Jesse Schell
       isCorrect: 1
       powerup: 0
+    - answer: youtube.com/TheGameMakersToolkit
+      isCorrect: 1
+      powerup: 0
   - questionText: El profesor de EDA
     questionDuration: 10
-    profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
+    profeSprite: {fileID: 21300000, guid: 54aaa4dc5b10bb74d90138888c177e76, type: 3}
     answers:
-    - answer: Ignacio Fabregas
-      isCorrect: 0
+    - answer: Miguel Zamalloa
+      isCorrect: 1
       powerup: 0
     - answer: Isabel Pita
       isCorrect: 0
       powerup: 0
-    - answer: Miguel Zamalloa
-      isCorrect: 1
+    - answer: Ignacio Fabregas
+      isCorrect: 0
       powerup: 0
   - questionText: Sistema operativo para informaticos
     questionDuration: 10
-    profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
+    profeSprite: {fileID: 21300000, guid: 16d40d0ad0c65b24eb33449652b6b7ef, type: 3}
     answers:
     - answer: Windows
       isCorrect: 0
       powerup: 0
-    - answer: Linux
-      isCorrect: 1
-      powerup: 0
     - answer: Android
       isCorrect: 0
+      powerup: 0
+    - answer: Linux
+      isCorrect: 1
       powerup: 0
     - answer: Mac
       isCorrect: 0
@@ -339,37 +339,37 @@ MonoBehaviour:
     questionDuration: 10
     profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
     answers:
-    - answer: 01010011 01101001
-      isCorrect: 1
-      powerup: 0
     - answer: 01001110 01101111
       isCorrect: 0
+      powerup: 0
+    - answer: 01010011 01101001
+      isCorrect: 1
       powerup: 0
   - questionText: Como se forman los grupos de practicas?
     questionDuration: 6
     profeSprite: {fileID: 21300000, guid: e6c61c1de34e0764d85b37a3dd01bba6, type: 3}
     answers:
-    - answer: Por posicion de asiento
-      isCorrect: 0
-      powerup: 0
-    - answer: Por puntos cardinales
-      isCorrect: 1
-      powerup: 0
     - answer: Por preferencia
       isCorrect: 0
       powerup: 0
+    - answer: Por posicion de asiento
+      isCorrect: 0
+      powerup: 0
     - answer: Por elementos de Avatar
+      isCorrect: 1
+      powerup: 0
+    - answer: Por puntos cardinales
       isCorrect: 1
       powerup: 0
   - questionText: Los alumnos copian las practicas de cursos anteriores...
     questionDuration: 10
     profeSprite: {fileID: 1405936903238025810, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
-    - answer: Cambiar el enunciado
-      isCorrect: 0
-      powerup: 0
     - answer: No se corrigen y no puntuan lmao
       isCorrect: 1
+      powerup: 0
+    - answer: Cambiar el enunciado
+      isCorrect: 0
       powerup: 0
   - questionText: La animacion en phaser...
     questionDuration: 10
@@ -392,29 +392,29 @@ MonoBehaviour:
     questionDuration: 10
     profeSprite: {fileID: 203739905220568640, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
-    - answer: Eso es un cleon
-      isCorrect: 1
+    - answer: Pat?
+      isCorrect: 0
       powerup: 0
     - answer: Eso es un gato
       isCorrect: 1
       powerup: 0
-    - answer: Pat?
-      isCorrect: 0
-      powerup: 0
     - answer: Eso es github
+      isCorrect: 1
+      powerup: 0
+    - answer: Eso es un cleon
       isCorrect: 1
       powerup: 0
   - questionText: Famosa saga de PS4
     questionDuration: 10
     profeSprite: {fileID: -1736928041035241418, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
-    - answer: Spiderman PS4
+    - answer: God of War
       isCorrect: 0
       powerup: 0
     - answer: Mario Bros
       isCorrect: 1
       powerup: 0
-    - answer: God of War
+    - answer: Spiderman PS4
       isCorrect: 0
       powerup: 0
     - answer: 'Horizon: Zero Dawn'
@@ -424,17 +424,17 @@ MonoBehaviour:
     questionDuration: 10
     profeSprite: {fileID: 4001442472916971327, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
-    - answer: Los apuntes de Samir
-      isCorrect: 0
-      powerup: 0
     - answer: Los .exe
       isCorrect: 0
       powerup: 0
-    - answer: "Usuario y contrase\xF1a de Twitter"
+    - answer: Los apuntes de Samir
       isCorrect: 0
       powerup: 0
     - answer: Assets
       isCorrect: 1
+      powerup: 0
+    - answer: "Usuario y contrase\xF1a de Twitter"
+      isCorrect: 0
       powerup: 0
   - questionText: 'La varianza es:'
     questionDuration: 10
@@ -443,9 +443,22 @@ MonoBehaviour:
     - answer: Una medida de dispersion de datos
       isCorrect: 1
       powerup: 0
+    - answer: "Los precios de cafeter\xEDa"
+      isCorrect: 1
+      powerup: 0
     - answer: Faltar a clase, pero solo algunas veces
       isCorrect: 0
       powerup: 0
-    - answer: "Los precios de cafeter\xEDa"
+  - questionText: Como esta mi gato?
+    questionDuration: 10
+    profeSprite: {fileID: 203739905220568640, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
+    answers:
+    - answer: Haciendo un merge
       isCorrect: 1
+      powerup: 0
+    - answer: Muerto
+      isCorrect: 0
+      powerup: 0
+    - answer: Vivo
+      isCorrect: 0
       powerup: 0
