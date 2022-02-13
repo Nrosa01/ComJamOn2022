@@ -7,7 +7,7 @@ public class Result : MonoBehaviour
     float time;
     public bool modoUCM = true;
 
-   public int creditos => (((int)TotalTime - 20) / 10) * 6;
+   public int creditos => Mathf.Max((((int)TotalTime - 20) / 6), 0);
 
     public float TotalTime { get => time; set => time = value; }
 

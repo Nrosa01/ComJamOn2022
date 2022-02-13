@@ -63,7 +63,7 @@ MonoBehaviour:
       isCorrect: 1
       powerup: 0
     - answer: Funciona, pero no se por que
-      isCorrect: 1
+      isCorrect: 0
       powerup: 0
   - questionText: Quien tiene razon a la hora de hacer un break en un for?
     questionDuration: 10

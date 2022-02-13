@@ -16,7 +16,7 @@ public class ShareHighScore : MonoBehaviour
         Result result = textMesh.GetResult;
 
         string modo = result.modoUCM ? "- Modo UCM" : "Modo Normal";
-        string nameParameter = "He conseguido " + result.creditos + " creditos en Get High, intenta aprobar si puedes " + modo;//this is limited in text length 
+        string nameParameter = "He conseguido " + result.creditos * 6 + " creditos en Get High, intenta aprobar si puedes " + modo;//this is limited in text length 
         nameParameter += "\n#ComjamOnFDI2022 #GetHigh";
         Application.OpenURL(TWITTER_ADDRESS +
            "?text=" + WWW.EscapeURL(nameParameter + "\n" + descriptionParam + "\n" + "Obtén el juego:\n" + appStoreLink));

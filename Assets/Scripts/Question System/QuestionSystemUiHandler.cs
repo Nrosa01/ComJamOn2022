@@ -138,7 +138,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
         Sprite profeSprite = isRockQuestion ? rockSharedQuestion.GetCurrentQuestion.profeSprite : sharedQuestion.GetCurrentQuestion.profeSprite;
         if (profeSprite != null) profeImage.sprite = profeSprite;
         profeImage.enabled = profeSprite != null;
-        if (isRockQuestion) rockQuestionCurrent = 0;
+        //if (isRockQuestion) rockQuestionCurrent = 0;
     }
 
     private void OnDestroy()
@@ -152,7 +152,11 @@ public class QuestionSystemUiHandler : MonoBehaviour
     async private UniTaskVoid QuestionTimeout(CancellationToken cancellation)
     {
         await UniTask.Delay(GetQuestionDuration, DelayType.DeltaTime, PlayerLoopTiming.Update, cancellation);
-        if (!cancellation.IsCancellationRequested) OnAnswered();
+        if (!cancellation.IsCancellationRequested)
+        {
+            if (isRockQuestion) rockQuestionCurrent = 0;
+            OnAnswered();
+        }
     }
 
     private void OnAnswered(bool isCorrect = false)
