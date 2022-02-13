@@ -13,13 +13,58 @@ MonoBehaviour:
   m_Name: RockQuestion
   m_EditorClassIdentifier: 
   questions:
-  - questionText: SOY DE ROCK
+  - questionText: Se el tipo de persona que cuando se levante, haya terminado el
+      proyecto
     questionDuration: 0
-    profeSprite: {fileID: 0}
+    profeSprite: {fileID: -2749225959190097586, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
-    - answer: ROCK
+    - answer: Un RedBull te da alas
+      isCorrect: 1
+      powerup: 4
+    - answer: Mi corazon no tolera sobredosis de azucar
       isCorrect: 0
       powerup: 4
-    - answer: SI
+  - questionText: 'Los aprobados no se consiguen en un solo dia, por ello necesitas
+      descansar. '
+    questionDuration: 0
+    profeSprite: {fileID: -2749225959190097586, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
+    answers:
+    - answer: Adios CRUNCH, hola almohada
+      isCorrect: 1
+      powerup: 3
+    - answer: No gracias, prefiero CRUNCH
       isCorrect: 0
-      powerup: 4
+      powerup: 3
+  - questionText: El exito comienza contigo, pero una taza de cafe ayuda a despejar
+      la mente
+    questionDuration: 0
+    profeSprite: {fileID: -2749225959190097586, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
+    answers:
+    - answer: Pues no diria que no a un cafecito
+      isCorrect: 1
+      powerup: 1
+    - answer: No me gusta la cafeina
+      isCorrect: 0
+      powerup: 1
+  - questionText: "Sangre, sudor y apuntes. Los dos primeros los das, el \xFAltimo
+      lo consigues a cambio "
+    questionDuration: 0
+    profeSprite: {fileID: -2749225959190097586, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
+    answers:
+    - answer: Apuntes, apuntes, apuntes
+      isCorrect: 1
+      powerup: 2
+    - answer: Prefiero hacerlo por mi cuenta
+      isCorrect: 0
+      powerup: 2
+  - questionText: "Con inspiraci\xF3n y un poco de picaresca, puedes conseguirlo
+      todo"
+    questionDuration: 0
+    profeSprite: {fileID: -2749225959190097586, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
+    answers:
+    - answer: Si no me pillan, todo vale
+      isCorrect: 1
+      powerup: 0
+    - answer: Soy legal
+      isCorrect: 0
+      powerup: 0

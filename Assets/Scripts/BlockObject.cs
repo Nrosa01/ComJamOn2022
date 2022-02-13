@@ -86,8 +86,11 @@ public class BlockObject : MonoBehaviour
             float alpha = Mathf.Lerp(1, 0.5f, curve.Evaluate(timer / duration));
             sprite.color = new Color(initialColor.r, initialColor.g, initialColor.b, alpha);
             timer += Time.deltaTime;
-            await UniTask.Yield();
+            await UniTask.Yield(source.Token);
         }
+
+        if (source.Token.IsCancellationRequested)
+            return;
 
         transform.localScale = finalScale;
         sprite.color = new Color(initialColor.r, initialColor.g, initialColor.b, 0.5f);
