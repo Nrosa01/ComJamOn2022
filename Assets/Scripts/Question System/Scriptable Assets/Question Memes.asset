@@ -166,10 +166,10 @@ MonoBehaviour:
     profeSprite: {fileID: -1736928041035241418, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
     - answer: Globulo (0,1,1) RGB
-      isCorrect: 1
+      isCorrect: 0
       powerup: 0
     - answer: Linfocitos
-      isCorrect: 0
+      isCorrect: 1
       powerup: 0
     - answer: Paletos
       isCorrect: 0
@@ -303,7 +303,7 @@ MonoBehaviour:
     questionDuration: 10
     profeSprite: {fileID: 1405936903238025810, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
-    - answer: Manolo el del Bombi
+    - answer: Manolo el del Bombo
       isCorrect: 1
       powerup: 0
     - answer: Inevitable
@@ -312,7 +312,7 @@ MonoBehaviour:
     - answer: Tu padre
       isCorrect: 1
       powerup: 0
-  - questionText: Como vas a...?
+  - questionText: Como va Sam...?
     questionDuration: 10
     profeSprite: {fileID: 1405936903238025810, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
