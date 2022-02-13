@@ -5,8 +5,8 @@ public class TextBlockAsset : ScriptableObject
 {
     public string GetAsignatura(int asignatura)
     {
-        if (asignatura - 1 >= textos.Length) return "No deberias estar viendo esto";
-        else return textos[asignatura - 1];
+        if (asignatura >= textos.Length) return "No deberias estar viendo esto";
+        else return textos[asignatura];
     }
 
     [SerializeField] private string[] textos;
