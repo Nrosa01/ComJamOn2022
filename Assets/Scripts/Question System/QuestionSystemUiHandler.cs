@@ -136,7 +136,8 @@ public class QuestionSystemUiHandler : MonoBehaviour
 
         Sprite profeSprite = isRockQuestion ? rockSharedQuestion.GetCurrentQuestion.profeSprite : sharedQuestion.GetCurrentQuestion.profeSprite;
         if (profeSprite != null) profeImage.sprite = profeSprite;
-        else profeImage.enabled = false;
+        profeImage.enabled = profeSprite != null;
+        if (isRockQuestion) rockQuestionCurrent = 0;
     }
 
     private void OnDestroy()
