@@ -310,7 +310,7 @@ RectTransform:
   m_GameObject: {fileID: 266048908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 1372199210}
   m_Father: {fileID: 1173713259}
@@ -318,8 +318,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 49, y: -11}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &266048910
 MonoBehaviour:
@@ -1185,7 +1185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13, y: 146}
+  m_AnchoredPosition: {x: -13, y: 181}
   m_SizeDelta: {x: 363.66, y: 60.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1983832550
@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xBFA QUE SE JUEGA?"
+  m_text: A QUE SE JUEGA?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 04ed53a7dad3b104b845b38912a5ddc6, type: 2}
   m_sharedMaterial: {fileID: 2213830107425859796, guid: 04ed53a7dad3b104b845b38912a5ddc6, type: 2}
@@ -1235,8 +1235,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1320,7 +1320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 166, y: 94}
+  m_AnchoredPosition: {x: 212, y: 80}
   m_SizeDelta: {x: 363.66, y: 60.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2144366240
