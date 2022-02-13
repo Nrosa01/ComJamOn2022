@@ -647,6 +647,7 @@ GameObject:
   - component: {fileID: 1372199213}
   - component: {fileID: 1372199212}
   - component: {fileID: 1372199211}
+  - component: {fileID: 1372199214}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -730,6 +731,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 1372199214}
+        m_TargetAssemblyTypeName: ButtonScaleAnimation, Assembly-CSharp
+        m_MethodName: OnPointerDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1372199212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,6 +781,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372199209}
   m_CullTransparentMesh: 1
+--- !u!114 &1372199214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372199209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aae407b8182be64096f68fee7af27d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleChange: 2
+  duration: 0.25
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.044705447
+      outSlope: 0.044705447
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.48567617
+    - serializedVersion: 3
+      time: 0.4997863
+      value: 0.49995053
+      inSlope: 0.000006333977
+      outSlope: 0.000006333977
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14921004
+    - serializedVersion: 3
+      time: 1.0043262
+      value: -0.008222342
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1387209493
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,6 +28,7 @@ public class ChangeScene : MonoBehaviour
     [SerializeField] UITransicion transition;
     public async UniTaskVoid GenericSceneChange(string sceneName)
     {
+        SignalBus<PlaySoundSignal>.Fire(new PlaySoundSignal(Sounds.BotonYApuntes));
         await transition.EndLerp();
         SceneManager.LoadScene(sceneName);
     }

@@ -334,6 +334,7 @@ GameObject:
   - component: {fileID: 191973984}
   - component: {fileID: 191973983}
   - component: {fileID: 191973982}
+  - component: {fileID: 191973985}
   m_Layer: 5
   m_Name: 'GoBack '
   m_TagString: Untagged
@@ -417,6 +418,18 @@ MonoBehaviour:
           m_StringArgument: SceneGame
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 191973985}
+        m_TargetAssemblyTypeName: ButtonScaleAnimation, Assembly-CSharp
+        m_MethodName: OnPointerDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &191973983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,6 +468,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 191973980}
   m_CullTransparentMesh: 1
+--- !u!114 &191973985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191973980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aae407b8182be64096f68fee7af27d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleChange: 2
+  duration: 0.25
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.044705447
+      outSlope: 0.044705447
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.48567617
+    - serializedVersion: 3
+      time: 0.4997863
+      value: 0.49995053
+      inSlope: 0.000006333977
+      outSlope: 0.000006333977
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14921004
+    - serializedVersion: 3
+      time: 1.0043262
+      value: -0.008222342
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &209796815
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,6 +745,7 @@ GameObject:
   - component: {fileID: 790154804}
   - component: {fileID: 790154803}
   - component: {fileID: 790154802}
+  - component: {fileID: 790154805}
   m_Layer: 5
   m_Name: Normal Game
   m_TagString: Untagged
@@ -768,6 +829,18 @@ MonoBehaviour:
           m_StringArgument: SceneGame
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 790154805}
+        m_TargetAssemblyTypeName: ButtonScaleAnimation, Assembly-CSharp
+        m_MethodName: OnPointerDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &790154803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,6 +879,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790154800}
   m_CullTransparentMesh: 1
+--- !u!114 &790154805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790154800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aae407b8182be64096f68fee7af27d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleChange: 2
+  duration: 0.25
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.044705447
+      outSlope: 0.044705447
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.48567617
+    - serializedVersion: 3
+      time: 0.4997863
+      value: 0.49995053
+      inSlope: 0.000006333977
+      outSlope: 0.000006333977
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14921004
+    - serializedVersion: 3
+      time: 1.0043262
+      value: -0.008222342
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &801185440
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,6 +1072,7 @@ GameObject:
   - component: {fileID: 859541997}
   - component: {fileID: 859541996}
   - component: {fileID: 859541995}
+  - component: {fileID: 859541998}
   m_Layer: 5
   m_Name: GoBack
   m_TagString: Untagged
@@ -1035,6 +1156,18 @@ MonoBehaviour:
           m_StringArgument: SceneGame
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 859541998}
+        m_TargetAssemblyTypeName: ButtonScaleAnimation, Assembly-CSharp
+        m_MethodName: OnPointerDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &859541996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1073,6 +1206,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859541993}
   m_CullTransparentMesh: 1
+--- !u!114 &859541998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859541993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aae407b8182be64096f68fee7af27d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleChange: 2
+  duration: 0.25
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.044705447
+      outSlope: 0.044705447
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.48567617
+    - serializedVersion: 3
+      time: 0.4997863
+      value: 0.49995053
+      inSlope: 0.000006333977
+      outSlope: 0.000006333977
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14921004
+    - serializedVersion: 3
+      time: 1.0043262
+      value: -0.008222342
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &976622778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1395,6 +1575,7 @@ GameObject:
   - component: {fileID: 1640372356}
   - component: {fileID: 1640372355}
   - component: {fileID: 1640372354}
+  - component: {fileID: 1640372357}
   m_Layer: 5
   m_Name: ControlesBoton
   m_TagString: Untagged
@@ -1478,6 +1659,18 @@ MonoBehaviour:
           m_StringArgument: SceneGame
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 1640372357}
+        m_TargetAssemblyTypeName: ButtonScaleAnimation, Assembly-CSharp
+        m_MethodName: OnPointerDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1640372355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1516,6 +1709,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640372352}
   m_CullTransparentMesh: 1
+--- !u!114 &1640372357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640372352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aae407b8182be64096f68fee7af27d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleChange: 2
+  duration: 0.25
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.044705447
+      outSlope: 0.044705447
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.48567617
+    - serializedVersion: 3
+      time: 0.4997863
+      value: 0.49995053
+      inSlope: 0.000006333977
+      outSlope: 0.000006333977
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14921004
+    - serializedVersion: 3
+      time: 1.0043262
+      value: -0.008222342
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1705774452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,6 +1804,7 @@ GameObject:
   - component: {fileID: 1728504595}
   - component: {fileID: 1728504594}
   - component: {fileID: 1728504593}
+  - component: {fileID: 1728504596}
   m_Layer: 5
   m_Name: End Game
   m_TagString: Untagged
@@ -1647,6 +1888,18 @@ MonoBehaviour:
           m_StringArgument: SceneGame
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 1728504596}
+        m_TargetAssemblyTypeName: ButtonScaleAnimation, Assembly-CSharp
+        m_MethodName: OnPointerDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1728504594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1685,6 +1938,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728504591}
   m_CullTransparentMesh: 1
+--- !u!114 &1728504596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728504591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aae407b8182be64096f68fee7af27d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleChange: 2
+  duration: 0.25
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.044705447
+      outSlope: 0.044705447
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.48567617
+    - serializedVersion: 3
+      time: 0.4997863
+      value: 0.49995053
+      inSlope: 0.000006333977
+      outSlope: 0.000006333977
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14921004
+    - serializedVersion: 3
+      time: 1.0043262
+      value: -0.008222342
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1926843494
 GameObject:
   m_ObjectHideFlags: 0
