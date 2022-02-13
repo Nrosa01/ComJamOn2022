@@ -76,7 +76,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
                 break;
             case Powerups.Repo:
                 other = 1;
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 3; i++)
                     blockSystem.SpawnBlock();
                 break;
             case Powerups.DuermeBien:
