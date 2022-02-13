@@ -3695,8 +3695,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16.1, y: 14.65}
-  m_SizeDelta: {x: 1337.4, y: 2437.84}
+  m_AnchoredPosition: {x: -4.83, y: 14.65}
+  m_SizeDelta: {x: 1295.54, y: 2437.84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2087208551
 MonoBehaviour:
@@ -4037,6 +4037,14 @@ PrefabInstance:
       propertyPath: music
       value: 
       objectReference: {fileID: 8300000, guid: 614fd06b04057af42b0c1aabbc15f6d4, type: 3}
+    - target: {fileID: 8663264989279858638, guid: 0a54ca04a0a25444cb0602282b7fc1a1, type: 3}
+      propertyPath: montana
+      value: 
+      objectReference: {fileID: 8300000, guid: dafd835fda3206048a6a432a23aae45e, type: 3}
+    - target: {fileID: 8663264989279858638, guid: 0a54ca04a0a25444cb0602282b7fc1a1, type: 3}
+      propertyPath: sevilla
+      value: 
+      objectReference: {fileID: 8300000, guid: 06f3dd425611b7b4fb51bd3ca32b6030, type: 3}
     - target: {fileID: 8663264989279858638, guid: 0a54ca04a0a25444cb0602282b7fc1a1, type: 3}
       propertyPath: finished
       value: 
