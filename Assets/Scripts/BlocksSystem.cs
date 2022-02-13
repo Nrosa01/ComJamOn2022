@@ -63,7 +63,12 @@ public class BlocksSystem : MonoBehaviour
     }
     [SerializeField] UITransicion transition;
 
-    bool finished = false; 
+    bool finished = false;
+    float countTime = 0;
+    private void Update()
+    {
+        countTime += Time.deltaTime;
+    }
 
     void OnCubeChange(SignalOnBecomeVisible context)
     {
@@ -72,7 +77,7 @@ public class BlocksSystem : MonoBehaviour
 
         if (numOfCubes <= 0)
         {
-            result.TotalTime = Mathf.FloorToInt(Time.timeSinceLevelLoad);
+            result.TotalTime = Mathf.FloorToInt(countTime);
             Debug.Log("Time :" + result.TotalTime);
 
             if (!finished)
