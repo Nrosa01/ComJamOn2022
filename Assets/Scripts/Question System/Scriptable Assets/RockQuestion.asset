@@ -35,8 +35,7 @@ MonoBehaviour:
     - answer: No gracias, prefiero CRUNCH
       isCorrect: 0
       powerup: 3
-  - questionText: El exito comienza contigo, pero una taza de cafe ayuda a despejar
-      la mente
+  - questionText: 'El exito comienza contigo, pero una taza de cafe ayuda '
     questionDuration: 0
     profeSprite: {fileID: -2749225959190097586, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
@@ -46,8 +45,7 @@ MonoBehaviour:
     - answer: No me gusta la cafeina
       isCorrect: 0
       powerup: 1
-  - questionText: "Sangre, sudor y apuntes. Los dos primeros los das, el \xFAltimo
-      lo consigues a cambio "
+  - questionText: Sangre, sudor y apuntes. A por todas!
     questionDuration: 0
     profeSprite: {fileID: -2749225959190097586, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
