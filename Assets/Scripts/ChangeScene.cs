@@ -12,6 +12,12 @@ public class ChangeScene : MonoBehaviour
         //SceneManager.LoadScene("Escena Rioni");
     }
 
+    public void SceneGameNormal()
+    {
+        GenericSceneChange("Escena Juego Normal").Forget();
+        //SceneManager.LoadScene("Escena Rioni");
+    }
+
     public void Credits()
     {
         GenericSceneChange("Creditos").Forget();

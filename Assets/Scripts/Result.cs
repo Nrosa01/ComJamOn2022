@@ -5,6 +5,7 @@ using UnityEngine;
 public class Result : MonoBehaviour
 {
     float time;
+    public bool modoUCM = true;
 
     public float TotalTime { get => time; set => time = value; }
 
