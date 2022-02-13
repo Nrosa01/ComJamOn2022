@@ -12,6 +12,7 @@ public class MoveCamera : MonoBehaviour
     [Tooltip("Idealmente valor entre 0.01 y 0.03")]
 
     bool isMoving = false;
+    bool started = false;
 
     void Start()
     {
@@ -28,7 +29,9 @@ public class MoveCamera : MonoBehaviour
 
     void OnSignalBlockPlaced(SignalOnBlockPlaced signal)
     {
+        if(!started)
         isMoving = true;
+        started = true;
     }
 
     private void Update()
