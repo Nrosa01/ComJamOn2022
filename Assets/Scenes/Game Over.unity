@@ -474,8 +474,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Un fracaso mecanico, dinamico y estetico. Incluso Dise\xF1o de Videojuegos
-    fue demasiado para ti."
+  m_text: Las test de nacionalidad son mas dificiles que esto, replanteate de donde
+    eres
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 04ed53a7dad3b104b845b38912a5ddc6, type: 2}
   m_sharedMaterial: {fileID: 2213830107425859796, guid: 04ed53a7dad3b104b845b38912a5ddc6, type: 2}
