@@ -406,7 +406,7 @@ MonoBehaviour:
       powerup: 0
   - questionText: Famosa saga de PS4
     questionDuration: 10
-    profeSprite: {fileID: -1736928041035241418, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
+    profeSprite: {fileID: 1405936903238025810, guid: a69503a1a35ff704a95e223f55d307c8, type: 3}
     answers:
     - answer: 'Horizon: Zero Dawn'
       isCorrect: 0
