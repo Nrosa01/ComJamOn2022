@@ -134,7 +134,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
             this.answers[i].transform.parent.gameObject.SetActive(i < numAnswer);
         }
 
-        Sprite profeSprite = sharedQuestion.GetCurrentQuestion.profeSprite;
+        Sprite profeSprite = isRockQuestion ? rockSharedQuestion.GetCurrentQuestion.profeSprite : sharedQuestion.GetCurrentQuestion.profeSprite;
         if (profeSprite != null) profeImage.sprite = profeSprite;
     }
 
