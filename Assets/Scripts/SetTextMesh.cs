@@ -24,7 +24,7 @@ public class SetTextMesh : MonoBehaviour
         int secs = (int)result.TotalTime % 60;
 
         // El / 6 es para que siempre se trunque al múltiplo de 6 más por debajo (porque los créditos se consiguen de 6 en 6)
-        int asignaturas = (((int)result.TotalTime - 20) / 6); 
+        int asignaturas = Mathf.Max((((int)result.TotalTime - 20) / 6), 0); 
 
         mText.text = ("Tus apuntes han durado " + mins + ":" + secs.ToString().PadLeft(2, '0') + "\nTus creditos son " + asignaturas * 6);
 
