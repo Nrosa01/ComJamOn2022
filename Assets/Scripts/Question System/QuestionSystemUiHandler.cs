@@ -97,6 +97,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Confined;
         sharedQuestion.OnQuestionAnswered += OnAnswered;
         rockSharedQuestion.OnQuestionAnswered += OnAnswered;
         UpdateUI();
