@@ -76,7 +76,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
                 break;
             case Powerups.Repo:
                 other = 1;
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 3; i++)
                     blockSystem.SpawnBlock();
                 break;
             case Powerups.DuermeBien:
@@ -134,7 +134,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
             this.answers[i].transform.parent.gameObject.SetActive(i < numAnswer);
         }
 
-        Sprite profeSprite = sharedQuestion.GetCurrentQuestion.profeSprite;
+        Sprite profeSprite = isRockQuestion ? rockSharedQuestion.GetCurrentQuestion.profeSprite : sharedQuestion.GetCurrentQuestion.profeSprite;
         if (profeSprite != null) profeImage.sprite = profeSprite;
     }
 
@@ -148,7 +148,7 @@ public class QuestionSystemUiHandler : MonoBehaviour
 
     async private UniTaskVoid QuestionTimeout(CancellationToken cancellation)
     {
-        await UniTask.Delay(GetQuestionDuration, DelayType.UnscaledDeltaTime, PlayerLoopTiming.Update, cancellation);
+        await UniTask.Delay(GetQuestionDuration, DelayType.DeltaTime, PlayerLoopTiming.Update, cancellation);
         if (!cancellation.IsCancellationRequested) OnAnswered();
     }
 
@@ -164,15 +164,15 @@ public class QuestionSystemUiHandler : MonoBehaviour
             blockSystem.SpawnBlock();
             if (x2 > 0) blockSystem.SpawnBlock();
             else if(!powerupEnabled) powerupImage.enabled = false;
-            x2--;
         }
+            x2--;
 
         if (isCorrect) SignalBus<PlaySoundSignal>.Fire(new PlaySoundSignal(Sounds.AhhCorrect));
         else SignalBus<PlaySoundSignal>.Fire(new PlaySoundSignal(Sounds.OhhhIncorrect));
         GenericExtensions.CancelAndGenerateNew(ref source);
         questionBlockContainer.SetActive(false);
         if (bebida <= 0)
-            await UniTask.Delay(TIME_BETWEEN_QUESTIONS, DelayType.UnscaledDeltaTime, PlayerLoopTiming.Update, source.Token);
+            await UniTask.Delay(TIME_BETWEEN_QUESTIONS, DelayType.DeltaTime, PlayerLoopTiming.Update, source.Token);
         questionBlockContainer.SetActive(true);
         NextQuestion();
         QuestionTimeout(source.Token).Forget();
