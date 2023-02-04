@@ -24,6 +24,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -316,6 +317,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Profes_6: 4001442472916971327
+      Profes_3: -1736928041035241418
+      Profes_5: -8179870912509109453
+      Profes_7: -2749225959190097586
+      Profes_4: 5074963065193959036
+      Profes_0: -3737217333108074625
+      Profes_1: 1405936903238025810
+      Profes_2: 203739905220568640
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
